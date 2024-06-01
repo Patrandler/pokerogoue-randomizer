@@ -1,8 +1,8 @@
 const cost1 = ["Raupi", "Hornliu", "Rattfratz", "Paras"];
 const cost2 = ["Taubsi", "Habitak", "Rettan", "Sandan", "Zubat", "Myrapla", "Bluzuk", "Enton", "Krabby", /*"Voltoball",*/ "Ditto"];
-const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", /*Knofensa*/ "Tentacha", /*"Kleinstein"*/, "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", /*"Tangela"*/, "Goldini", /*"Amonitas"*/, /*"Kabuto"*/];
-const cost4 = ["Pikachu", /*"Pipi"*/, "Pummeluff", "Mauzi", /*"Menki"*/, "Fukano", "Porenta", "Dodu", "Onix", /*"Owei"*/, "Seeper", /*"Sterndu"*/, /*"Pantimos"*/, "Rossana", "Pinsir", "Evoli", /*"Porygon"*/, "Dratini"];
-const cost5 = [/*"Nockchan", "Kicklee", "Schlurp","Chaneira", "Kangama"*/, "Sichlor", /*"Elektek"*/, "Magmar", "Tauros", "Lapras", /*"Aerodactyl",*/ "Relaxo"]
+const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", /*Knofensa*/ "Tentacha", /*"Kleinstein"*/ "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", /*"Tangela"*/ "Goldini", /*"Amonitas"*/ /*"Kabuto"*/];
+const cost4 = ["Pikachu", /*"Pipi"*/ "Pummeluff", "Mauzi", /*"Menki"*/ "Fukano", "Porenta", "Dodu", "Onix", /*"Owei"*/ "Seeper", /*"Sterndu"*/ /*"Pantimos"*/ "Rossana", "Pinsir", "Evoli", /*"Porygon"*/ "Dratini"];
+const cost5 = [/*"Nockchan", "Kicklee", "Schlurp","Chaneira", "Kangama"*/ "Sichlor", /*"Elektek"*/ "Magmar", "Tauros", "Lapras", /*"Aerodactyl",*/ "Relaxo"]
 const cost6 = [/*"Arktos", "Zapdos", "Lavados",*/ "Mew"]
 const cost8 = ["Mewtwo"]
 
@@ -22,8 +22,8 @@ function myFunction() {
 
   while (pointCounter < 10) {
 
-    let firstPick;
-    do {
+    let firstPick = randomizer(8);
+   /* do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
     } while ( (firstPick === 1 && pointCounter + 3 > 10) ||
@@ -34,7 +34,7 @@ function myFunction() {
       (firstPick === 6 && pointCounter + 6 > 10) ||
       (firstPick === 7 && pointCounter + 8 > 10)
       // ... add checks for all other options (4, 5, 6, 7)
-      );
+      ); */
 
     if (firstPick === 1) {
       pointCounter += 3;
@@ -103,5 +103,3 @@ function chooseRandom(){
 
 
 }*/
-
-
