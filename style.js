@@ -1,7 +1,7 @@
-const cost3 = ["Bisasam", "Schiggy", "Glumanda"];
-const cost2 = ["Hornliu", "Taubsi", "Rattfratz"];
-const cost1 = ["1kosten Pokemon"];
-const cost4 = ["Riolu"];
+const cost1 = ["Raupi", "Hornliu", "Rattfratz", "Paras"];
+const cost2 = ["Taubsi", "Habitak", "Rettan", "Sandan", "Zubat", "Myrapla", "Bluzuk", "Enton", "Krabby", "Voltoball", "Ditto"];
+const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", "Tentacha", "Kleinstein", "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", "Tangela", "Goldini", "Amonitas", "Kabuto"];
+const cost4 = ["Pikachu", "Pipi", "Pummeluff", "Mauzi", "Menki", "Fukano", "Porenta", "Dodu", "Onix", "Owei", "Seeper", "Sterndu", "Pantimos", "Rossana", "Pinsir", "Evoli", "Porygon", "Dratini"];
 
 
 
