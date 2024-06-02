@@ -1,7 +1,7 @@
 const cost1 = ["Raupi", "Hornliu", "Rattfratz", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Sonnkern", "Icognito"
 , "Waumpel", "Zirpurze", "Burmi", "Purmel", "Tarundel"];
 const cost2 = ["Taubsi", "Habitak", "Rettan", "Sandan", "Zubat", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Felino", "Tannza"
-, "Fiffyen", "Zigzachs", "Gehweiher", "Formeo, "Plusle", "Minun", "Pandir", "Illumise", "Liebiskus"
+, "Fiffyen", "Zigzachs", "Gehweiher", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Liebiskus"
 , "Wadribie", "Bidiza", "Nagelotz", "Dusselgurr", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
 , "Raffel", "Sensect", "Ferkuli" ];
 const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", "Tentacha",  "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", "Goldini", "Endivie", "Feurigel", "Karnimani", "Lampi", "Pichu", "Pii", "Fluffeluff", "Voltilamm", "Griffel", "Traunfugil", "Snubbull", "Baldorfish", "Phanpy", "Farbeagle", "Kussilla"
