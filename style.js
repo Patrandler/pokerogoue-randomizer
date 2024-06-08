@@ -43,8 +43,8 @@ function pickItem(list) {
 }
 
 function myFunction() {
-  document.getElementById("pokemon").textContent = "";
-  document.getElementById("ersatz").textContent = "";
+  document.getElementById("pokemon").textContent = "Dein Team ist:";
+  document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
     let firstPick = randomizer(30);
@@ -106,8 +106,8 @@ function myFunction() {
   }
 
 function myFunction2() {
-  document.getElementById("pokemon2").textContent = "";
-  document.getElementById("ersatz2").textContent = "";
+  document.getElementById("pokemon2").textContent = "Dein Team ist:";
+  document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
     let firstPick = randomizer(21);
