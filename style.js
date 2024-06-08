@@ -43,9 +43,10 @@ function pickItem(list) {
 }
 
 function myFunction() {
-
+  document.getElementById("pokemon").textContent = "";
+  document.getElementById("ersatz").textContent = "";
   while (pointCounter < 10) {
-
+  
     let firstPick = randomizer(30);
     /*do {
       firstPick = randomizer(8);
@@ -105,9 +106,10 @@ function myFunction() {
   }
 
 function myFunction2() {
-
+  document.getElementById("pokemon2").textContent = "";
+  document.getElementById("ersatz2").textContent = "";
   while (pointCounter < 10) {
-
+  
     let firstPick = randomizer(21);
     /*do {
       firstPick = randomizer(8);
