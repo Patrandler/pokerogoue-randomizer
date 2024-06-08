@@ -48,7 +48,7 @@ function myFunction() {
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
-    let firstPick = randomizer(30);
+    let firstPick = randomizer(31);
     /*do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
@@ -92,12 +92,17 @@ function myFunction() {
       const chosenItem = pickItem(cost6);
       document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte)";
       pointCounter += 6;
-    }
-
+    } 
     else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
       document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte)";
       pointCounter += 8;
+    }
+
+    else if (firstPick === 31) {
+      const chosenItem = pickItem(cost7);
+      document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte)";
+      pointCounter += 7;
     }
 
     }
@@ -112,7 +117,7 @@ function myFunction2() {
   document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
-    let firstPick = randomizer(21);
+    let firstPick = randomizer(22);
     /*do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
