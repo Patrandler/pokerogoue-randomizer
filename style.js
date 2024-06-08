@@ -101,7 +101,7 @@ function myFunction() {
 
     else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
-      document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte)";
       pointCounter += 7;
     }
 
