@@ -22,8 +22,8 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Pummeluff", "Ma
 , "Geosali", "Klibbe", "Forgita", "Normifin", "Knattox", "Schlurm", "Flaniwal", "Lumispross", "Gruff", "Flaminkno", "Agiluza", "Mortcha", "Frospino"
 
 ];
-const cost5 = ["Sichlor", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Tropius", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Shardrago", "Bisofank", "Furnifraß", "Floette",
-, "Quartermak", "Koalelu", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon",
+const cost5 = ["Sichlor", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Tropius", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Shardrago", "Bisofank", "Furnifraß", "Floette"
+, "Quartermak", "Koalelu", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
 , "Mopex", "Nigiragi", "Gierspenst", "PalTauros" 
 ]
 const cost6 = ["Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Kapu-Riki", "Masskito", "Chonjian", "Beatori", "Kriechflügel", "Eisenfalter"]
