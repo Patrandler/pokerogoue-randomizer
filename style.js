@@ -27,7 +27,7 @@ const cost5 = ["Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Sk
 , "Mopex", "Nigiragi", "Gierspenst", "PalTauros" 
 ]
 const cost6 = ["Lavados", "Entei", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Kapu-Riki", "Schlingking", "Masskito", "Chonjian", "Beatori", "Kriechflügel", "Eisenfalter", "Donnersichel"]
-const cost8 = ["Palkia"]
+const cost8 = ["Palkia", "Ho-Oh"]
 const cost7 = ["Katagami", "Demeteros"]
 
 
