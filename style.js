@@ -107,7 +107,7 @@ function myFunction() {
       document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte)";
       pointCounter += 9;
 
-    }
+    }}
 
   document.getElementById("ersatz").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 
