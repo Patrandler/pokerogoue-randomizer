@@ -13,22 +13,24 @@ const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Kleinstein", "Amonitas", "Kabu
 , "Chimpep", "Hopplo", "GalMakabaja", "GalZigzachs", "GalVoltobal", "Toxel", "Memmeon", "GalFlegmon", "Termopod", "Servol", "Salanga", "Snomnom", "Kleptifux", "Cottini", "Wolly", "Kamehaps", "Voldi", "Klonkett", "Urgel", "Pikuda", "Klopptopus", "Fatalitee", "Bähmon", "Hokumil", "Britzigel", "Morpeko"
 , "Felori", "Krokel", "Kwaks", "Blipp", "Olini", "Mobtiff", "Weherba", "Micrick", "Pamo", "Hefel", "Krawalloro", "Voltrel", "Sproxi", "Tentagra", "Chilingel", "Relluk", "Flattutu", "Schligda", "Adebom", "PalFelino"
 ];
-const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummeluff", "Mauzi",  "Fukano", "Porenta", "Dodu", "Onix",  "Seeper",   "Rossana", "Pinsir", "Evoli",  "Dratini", "Marill", "Kramurx", "Rabauz", "Dummisel", "Hunduster", "Girafarig", "Skorgla", "Teddiursa", "Damhirplex", "Elekid", "Magby", "Larvitar"
+const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummeluff", "Mauzi",  "Fukano", "Porenta", "Dodu", "Onix",  "Seeper",   "Rossana", "Pinsir", "Evoli",  "Dratini", "Marill", "Kramurx", "Pottrott", "Sniebel" "Rabauz", "Dummisel", "Hunduster", "Girafarig", "Skorgla", "Teddiursa", "Damhirplex", "Elekid", "Magby", "Larvitar"
 , "Bummelz", "Nincada", "Meditie", "Vepitis", "Roselia", "Qurtel", "Knacklion", "Sonnfel", "Barschwa", "Kecleon", "Palimpalim", "Relicanth", "Kindwurm"
-, "Mobai", "Mampfaxo", "Wonneira", "Kaumalat", "Venuflibis"
+, "Mobai", "Mampfaxo", "Wonneira", "Kaumalat", "Venuflibis", "Phione" 
 ,  "Rotomurf", "Maracamba", "Ignivor", "Ohrdoch", "Flampion", "Galapaflos", "Mammolida", "Flapteryx", "Milza", "Flunschlik", "Gladiantri", "Kapuno"
 , "Coiffwaff", "Gramokles", "Dedenne", "Clavion", "Resladero", "eF-eM", "Krabbox", "Togedemaru", "Curelei", "AloSandan", "AloVulpix"
-, "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "GalMauzi", "GalPonita", "GalCorason", "GalFlunschliko"
+, "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "GalMauzi", "GalPonita", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
 , "Geosali", "Klibbe", "Forgita", "Normifin", "Knattox", "Schlurm", "Flaniwal", "Lumispross", "Gruff", "Flaminkno", "Agiluza", "Mortcha", "Frospino"
 
 ];
 const cost5 = ["Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Shardrago", "Bisofank", "Furnifraß", "Floette"
 , "Quartermak", "Koalelu", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
-, "Mopex", "Nigiragi", "Gierspenst", "PalTauros" 
+, "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai" 
 ]
-const cost6 = ["Lavados", "Entei", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Kapu-Riki", "Schlingking", "Masskito", "Chonjian", "Beatori", "Kriechflügel", "Eisenfalter", "Donnersichel"]
+const cost6 = ["Lavados", "Entei", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Terakium", "Viridium", "Kapu-Riki", "Schlingking", "Masskito", "Chonjian", "Beatori", "Kriechflügel", "Eisenfalter", "Donnersichel"]
 const cost8 = ["Palkia", "Ho-Oh"]
 const cost7 = ["Katagami", "Demeteros"]
+const cost9 = ["Arceus"]
+
 
 
 let pointCounter = 0;
@@ -48,7 +50,7 @@ function myFunction() {
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
-    let firstPick = randomizer(31);
+    let firstPick = randomizer(32);
     /*do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
@@ -103,7 +105,10 @@ function myFunction() {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte)";
       pointCounter += 7;
-    }
+    }  else if (firstPick === 32) {
+      const chosenItem = pickItem(cost9);
+      document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte)";
+      pointCounter += 9;
 
     }
 
@@ -117,7 +122,7 @@ function myFunction2() {
   document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
-    let firstPick = randomizer(22);
+    let firstPick = randomizer(23);
     /*do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
@@ -171,6 +176,10 @@ function myFunction2() {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon2").textContent += chosenItem + " (7 Punkte)";
       pointCounter += 7;
+    } else if ((firstPick=== 23) && pointCounter <= 1) {
+      const chosenItem = pickItem(cost9);
+      document.getElementById("pokemon2").textContent += chosenItem + " (9 Punkte)";
+      pointCounter += 9;
     }
 
     else {
