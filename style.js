@@ -21,7 +21,7 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummel
 , "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "Humangolith", "GalMauzi", "GalPonita", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
 , "Geosali", "Klibbe", "Forgita", "Normifin", "Knattox", "Schlurm", "Flaniwal", "Lumispross", "Gruff", "Flaminkno", "Agiluza", "Mortcha", "Frospino"];
 const cost5 = ["Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Fermicula", "Shardrago", "Bisofank", "Furnifraß", "Meltan", "Floette"
-, "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
+, "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
 , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
 const cost6 = ["Lavados", "Entei", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Terrakium", "Viridium", "Genesect", "Kapu-Riki", "Schlingking", "Masskito", "Zarude", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Donnersichel"]
 const cost7 = ["Demeteros", "Katagami", "Marshadow"]
