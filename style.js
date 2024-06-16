@@ -24,7 +24,7 @@ const cost5 = ["Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Sk
 , "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
 , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
 const cost6 = ["Lavados", "Entei", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Terrakium", "Viridium", "Genesect", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Donnersichel", "Flatterhaar"]
-const cost7 = ["Vitini", "Demeteros", "Katagami", "Marshadow"]
+const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Coronspa"]
 const cost9 = ["Arceus"]
 
