@@ -16,16 +16,16 @@ const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Kleinstein", "Amonitas", "Kabu
 const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummeluff", "Mauzi", "Fukano", "Porenta", "Dodu", "Onix", "Seeper", "Rossana", "Pinsir", "Evoli",  "Dratini", "Marill", "Kramurx", "Pottrott", "Sniebel", "Rabauz", "Dummisel", "Hunduster", "Girafarig", "Skorgla", "Teddiursa", "Damhirplex", "Elekid", "Magby", "Larvitar"
 , "Bummelz", "Nincada", "Meditie", "Tanhel", "Lunastein", "Vepitis", "Roselia", "Qurtel", "Knacklion", "Sonnfel", "Barschwa", "Kecleon", "Palimpalim", "Relicanth", "Kindwurm"
 , "Mobai", "Mampfaxo", "Wonneira", "Kaumalat", "Venuflibis", "Plaudagei", "Phione" 
-,  "Rotomurf", "Maracamba", "Ignivor", "Ohrdoch", "Flampion", "Galapaflos", "Mammolida", "Flapteryx", "Milza", "Flunschlik", "Gladiantri", "Kapuno"
+,  "Rotomurf", "Maracamba", "Ignivor", "Ohrdoch", "Flampion", "Galapaflos", "Barschuft", "Mammolida", "Flapteryx", "Milza", "Flunschlik", "Gladiantri", "Kapuno"
 , "Viscora", "Gramokles", "Dedenne", "Clavion", "Resladero", "eF-eM", "Krabbox", "Coiffwaff", "Togedemaru", "Curelei", "Miniras", "AloSandan", "AloVulpix"
-, "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "Humangolith", "Brimova", "GalMauzi", "GalPonita", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
+, "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "Humangolith", "Brimova", "GalMauzi", "GalPonita", "GalFlampion", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
 , "Geosali", "Klibbe", "Forgita", "Normifin", "Knattox", "Schlurm", "Flaniwal", "Lumispross", "Gruff", "Flaminkno", "Agiluza", "Mortcha", "Frospino"];
 const cost5 = ["Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Fermicula", "Shardrago", "Bisofank", "Furnifraß", "Meltan", "Floette"
-, "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "GalPorenta", "Pescragon"
+, "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", "Duraludon", "Leycrodon", "Lectragon", "GalPorenta", "Pescragon"
 , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
-const cost6 = ["Lavados", "Entei", "Suicune", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Terrakium", "Viridium", "Genesect", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Eisenkrieger", "Donnersichel", "Flatterhaar"]
+const cost6 = ["Lavados", "Entei", "Suicune", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Terrakium", "Viridium", "Genesect", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar"]
 const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow"]
-const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Necrozma", "Coronospa"]
+const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
 
 
