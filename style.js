@@ -27,7 +27,7 @@ const cost6 = ["Lavados", "Entei", "Suicune", "Darkrai", "Cresselia", "Shaymin",
 const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Ursaluna"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
-const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
+//const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
 
 
 let pointCounter = 0;
@@ -48,7 +48,7 @@ function myFunction() {
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
   
-    let firstPick = randomizer(33);
+    let firstPick = randomizer(32);
     /*do {
       firstPick = randomizer(8);
       // Check for overflow with all possibilities (assuming pointCounter starts at 0)
@@ -108,11 +108,11 @@ function myFunction() {
       document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte)";
       pointCounter += 9;
 
-    } else if(firstPick === 33) {
+   /* } else if(firstPick === 33) {
       const chosenItem = pickItem(pokemonTypes);
       document.getElementById("bonus").textContent += "Bonus: Ein " + chosenItem + "Pokemon deiner Wahl, muss mit einem Pokemon aus der Liste ausgetauscht werdem, dass die selben Kosten hat.";
       
-  }
+  }*/
 
   document.getElementById("ersatz").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 
@@ -190,7 +190,7 @@ function myFunction2() {
     }
 
   document.getElementById("ersatz2").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
-
+}
   }
 
 /*function myFunction() {
