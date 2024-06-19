@@ -27,7 +27,7 @@ const cost6 = ["Lavados", "Entei", "Suicune", "Darkrai", "Cresselia", "Shaymin",
 const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Ursaluna"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
-const pokemonTypes ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
+const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
 
 
 let pointCounter = 0;
