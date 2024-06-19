@@ -43,6 +43,7 @@ function pickItem(list) {
 
 function myFunction() {
   pointCounter = 0;
+  document.getElementById("bonus").textContent = "";
   document.getElementById("pokemon").textContent = "Dein Team ist:";
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
@@ -109,7 +110,7 @@ function myFunction() {
 
     } else if(firstPick === 33) {
       const chosenItem = pickItem(pokemonTypes);
-      document.getElementById("pokemon").textContent += "Bonus: Ein " + chosenItem + "Pokemon deiner Wahl, muss mit einem Pokemon aus der Liste ausgetauscht werdem, dass die selben Kosten hat.";
+      document.getElementById("bonus").textContent += "Bonus: Ein " + chosenItem + "Pokemon deiner Wahl, muss mit einem Pokemon aus der Liste ausgetauscht werdem, dass die selben Kosten hat.";
       
   }
 
