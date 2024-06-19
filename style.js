@@ -192,7 +192,7 @@ function myFunction2() {
 
   document.getElementById("ersatz2").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 }
-  }
+  
 
 /*function myFunction() {
 
