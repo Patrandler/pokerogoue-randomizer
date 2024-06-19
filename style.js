@@ -111,7 +111,7 @@ function myFunction() {
 
   } else if(firstPick === 33) {
      const chosenItem = pickItem(pokemonTypes);
-     document.getElementById("bonus").textContent += "Bonus: Ein " + chosenItem + " Pokemon deiner Wahl, muss mit einem Pokemon aus der Liste ausgetauscht werdem, dass die selben Kosten hat.";
+     document.getElementById("bonus").textContent += "Bonus: Ein " + chosenItem + " Pokemon deiner Wahl, muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
      pointCounter+=0;
  }}
 
