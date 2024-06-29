@@ -18,13 +18,13 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummel
   , "Mobai", "Mampfaxo", "Wonneira", "Kaumalat", "Venuflibis", "Plaudagei", "Phione"
   ,  "Rotomurf", "Maracamba", "Ignivor", "Ohrdoch", "Flampion", "Galapaflos", "Barschuft", "Mammolida", "Flapteryx", "Milza", "Flunschlik", "Gladiantri", "Kapuno"
   , "Viscora", "Gramokles", "Dedenne", "Clavion", "Resladero", "eF-eM", "Krabbox", "Coiffwaff", "Togedemaru", "Curelei", "Miniras", "AloSandan", "AloMauzi", "AloVulpix"
-  , "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "Humangolith", "Brimova", "Duraludon", "GalMauzi", "GalPonita", "GalFlampion", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
+  , "Meikro", "Knapfel", "Kubuin", "Kupfanti", "Knarbon", "Grolldra", "Legios", "Humangolith", "Brimova", "Duraludon", "GalMauzi", "GalBaldorfish", "GalFukano", "GalPonita", "GalFlampion", "GalCorason", "GalFlunschliko", "GalSniebel", "GalZorua"
   , "Geosali", "Klibbe", "Forgita", "Normifin", "Knattox", "Schlurm", "Flaniwal", "Lumispross", "Gruff", "Flaminkno", "Agiluza", "Mortcha", "Frospino"];
 const cost5 = ["Aerodactyl", "Kangama", "Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Frigometri", "Fermicula", "Karadonis", "Jiutesto", "Shardrago", "Bisofank", "Furnifraß", "Meltan", "Floette"
   , "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", , "Leycrodon", "Lectragon", "GalPorenta", "Pescragon"
   , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
-const cost6 = ["Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar"]
-const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Cupidos", "Ursaluna"]
+const cost6 = ["Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Heatran", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz"]
+const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Cupidos", "Phantoross", "Ursaluna"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Zygarde", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
