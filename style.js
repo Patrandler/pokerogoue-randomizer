@@ -202,6 +202,9 @@ function myFunction2() {
 
 }
 
+document.getElementById("version").textContent += "Version vom 29.06.2024";
+
+
 /*function myFunction() {
 
   while (pointCounter <10) {
