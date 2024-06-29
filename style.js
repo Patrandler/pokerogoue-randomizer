@@ -202,7 +202,11 @@ function myFunction2() {
 
 }
 
-document.getElementById("version").textContent += "Version vom 29.06.2024";
+function version () {
+  document.getElementById("version").textContent += "Version vom 29.06.2024, zuletzt hinzugefügt Phantoross etc.";
+}
+
+version();
 
 
 /*function myFunction() {
