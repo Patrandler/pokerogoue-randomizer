@@ -2,13 +2,13 @@ const cost1 = ["Raupi", "Zubat", "Hornliu", "Rattfratz", "Paras", "Wiesor", "Hoo
   , "Waumpel", "Zirpurze", "Burmi", "Purmel", "Tarundel"];
 const cost2 = ["Taubsi", "Habitak", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
   , "Fiffyen", "Zigzachs", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Liebiskus"
-  , "Wadribie", "Bidiza", "Nagelotz", "Dusselgurr", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
+  , "Wadribie", "Bidiza", "Nagelotz", "Dusselgurr", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
   , "Raffel", "Sensect", "Ferkuli" ];
 const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Kleinstein", "Amonitas", "Kabuto", "Tangela", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", "Tentacha",  "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", "Goldini", "Endivie", "Feurigel", "Karnimani", "Togepi", "Lampi", "Yanma", "Remoraid", "Corasonn", "Pichu", "Pii", "Fluffeluff", "Voltilamm", "Griffel", "Traunfugil", "Snubbull", "Baldorfish", "Phanpy", "Farbeagle", "Kussilla"
   , "Geckarbor", "Flemmli", "Hydropi", "Loturzel", "Zwirrlicht", "Samurzel", "Seemops", "Quiekel", "Botogel", "Schwalbini", "Wingull", "Knilz", "Flurmel", "Makuhita", "Azurill", "Nasgnet", "Eneco", "Zobiris", "Stollunior", "Frizelbliz", "Schluppuck", "Kanivanha", "Wailmer", "Camaub", "Spoink", "Tuska", "Wablu", "Schmerbe", "Krebscorps", "Puppance", "Liliep", "Anorith", "Shuppet", "Isso", "Schneppke", "Perlu"
   , "Chelast", "Panflam", "Plinfa", "Haspiror", "Pachirisu", "Shnebedeck", "Staralili", "Trasla", "Sheinux", "Knospi", "Koknodon", "Schilterus", "Bamelin", "Kikugi", "Schalellos", "Driftlon", "Charmian", "Klingplim", "Skunkapuh", "Bronzel", "Pantimimi", "Hippopotas", "Pionskora", "Glibunkel", "Finneon", "Mantirps"
   , "Serpifeu", "Floink", "Ottaro", "Lichtel", "Laukaps", "Schnuthelm", "Skallyk", "Yorkleff", "Felilou", "Pygraulon", "Vegimak", "Grillmak", "Sodamak", "Somniam", "Elezeba", "Kiesling", "Fleknoil", "Praktibalk", "Schallquap", "Strawickl", "Toxiped", "Waumboll", "Lilminip", "Ganovil", "Lithomith", "Zurrokex", "Makabaja", "Unratütox", "Zorua", "Picochilla", "Mollimorba", "Monozyto", "Piccolente", "Gelatini", "Sesokitz", "Emolga", "Tarnpignon", "Quabbel", "Wattzapf", "Kastadur", "Klikk", "Zapplardin", "Petznief", "Lin-Fu", "Golbit", "Geronimatz"
-  , "Igamaro", "Fynx", "Froxy", "Balgoras", "Psiau","Dartiri", "Leufeo", "Flabébé", "Mähikel", "Paragoni", "Pam-Pam", "Parfi", "Flauschling", "Iscalar", "Bithora", "Scampisto", "Eguana", "Amarino", "Irrbis", "Arktip"
+  , "Igamaro", "Froxy", "Balgoras", "Psiau","Dartiri", "Leufeo", "Flabébé", "Mähikel", "Paragoni", "Pam-Pam", "Parfi", "Flauschling", "Iscalar", "Bithora", "Scampisto", "Eguana", "Amarino", "Irrbis", "Arktip"
   , "Bauz", "Flamiau", "Robball", "Choreogel", "Bubungus", "Peppeck", "Wommel", "Wuffels", "Lusardin", "Garstella", "Pampuli", "Araqua", "Imantis", "Molunk", "Frubberl", "Reißlaus", "Sankabuh", "Gufa", "AloKleinstein", "Velursi", "AloDigda", "AloSleima"
   , "Chimpep", "Hopplo", "GalMakabaja", "GalZigzachs", "GalVoltobal", "Toxel", "Memmeon", "GalFlegmon", "Termopod", "Servol", "Salanga", "Snomnom", "Kleptifux", "Cottini", "Wolly", "Kamehaps", "Voldi", "Klonkett", "Urgel", "Pikuda", "Klopptopus", "Fatalitee", "Bähmon", "Hokumil", "Britzigel", "Morpeko"
   , "Felori", "Krokel", "Kwaks", "Blipp", "Olini", "Mobtiff", "Weherba", "Micrick", "Pamo", "Hefel", "Krawalloro", "Voltrel", "Sproxi", "Tentagra", "Chilingel", "Relluk", "Flattutu", "Schligda", "Adebom", "PalFelino"
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 07.07.2024, zuletzt hinzugefügt: GalZapdos";
+  document.getElementById("version").textContent = "Version vom 07.07.2024, zuletzt hinzugefügt: Fynx>Tier 2";
 }
 
 version();
