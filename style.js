@@ -23,7 +23,7 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummel
 const cost5 = ["Aerodactyl", "Kangama", "Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Frigometri", "Fermicula", "Karadonis", "Jiutesto", "Shardrago", "Bisofank", "Furnifraß", "Meltan", "Floette"
   , "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", , "Leycrodon", "Lectragon", "GalPorenta", "Pescragon"
   , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
-const cost6 = ["Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Regice", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Heatran", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz"]
+const cost6 = ["Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Regice", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Heatran", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz"]
 const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Cupidos", "Phantoross", "Ursaluna"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Zygarde", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 07.07.2024, zuletzt hinzugefügt: Regice";
+  document.getElementById("version").textContent = "Version vom 07.07.2024, zuletzt hinzugefügt: GalZapdos";
 }
 
 version();
