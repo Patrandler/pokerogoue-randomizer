@@ -67,47 +67,47 @@ function myFunction() {
     if (firstPick >= 0 && firstPick <= 5) {
       pointCounter += 3;
       const chosenItem = pickItem(cost3);
-      document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
 
     } else if (firstPick >= 6 && firstPick <= 11) {
       const chosenItem = pickItem(cost2);
-      document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
       pointCounter += 2;
     } else if (firstPick >= 12 && firstPick <= 17) {
       const chosenItem = pickItem(cost1);
-      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt)";
+      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";
       pointCounter += 1;
     }
     else if (firstPick >= 18 && firstPick <= 23) {
       const chosenItem = pickItem(cost4);
-      document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
       pointCounter += 4;
     }
 
     else if (firstPick >= 24 && firstPick <= 28) {
       const chosenItem = pickItem(cost5);
-      document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
       pointCounter += 5;
     }
 
     else if (firstPick === 29) {
       const chosenItem = pickItem(cost6);
-      document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
       pointCounter += 6;
     }
     else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
-      document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
       pointCounter += 8;
     }
 
     else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
-      document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
     }  else if (firstPick === 32) {
       const chosenItem = pickItem(cost9);
-      document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte)";
+      document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
       pointCounter += 9;
 
 
