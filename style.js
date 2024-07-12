@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 07.07.2024, zuletzt hinzugefügt: Meltan> Tier6";
+  document.getElementById("version").textContent = "Version vom 12.07.2024, zuletzt hinzugefügt: Mew";
 }
 
 version();
