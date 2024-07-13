@@ -23,9 +23,9 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Pummel
 const cost5 = ["Aerodactyl", "Elektek", "Kangama", "Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Tropius", "Sengo", "Absol", "Kryppuk", "Rotom", "Flunkifer", "Symvolara", "Frigometri", "Fermicula", "Karadonis", "Jiutesto", "Shardrago", "Bisofank", "Furnifraß", "Floette"
   , "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", , "Leycrodon", "Lectragon", "GalPorenta", "Pescragon"
   , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
-const cost6 = ["Mew", "Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Regice", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Heatran", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz", "Eisenhals"]
+const cost6 = ["Mew", "Lavados", "Entei", "Suicune", "Raikou", "Registeel", "Regice", "Darkrai", "Cresselia", "Shaymin",  "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Heatran", "Voltriant", "Anego", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz", "Eisenhals"]
 const cost7 = ["Victini", "Demeteros", "Katagami", "Marshadow", "Cupidos", "Phantoross", "Ursaluna"]
-const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Zygarde", "Necrozma", "Magearna", "Coronospa"]
+const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Zekrom", "Zygarde", "Necrozma", "Magearna", "Coronospa"]
 const cost9 = ["Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
 
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 12.07.2024, zuletzt hinzugefügt: Elektek";
+  document.getElementById("version").textContent = "Version vom 13.07.2024, zuletzt hinzugefügt: Zekrom";
 }
 
 version();
