@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 27.07.2024, zuletzt hinzugefügt:Palkia; Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 27.07.2024, zuletzt hinzugefügt:Dialga; Raupy und Zubat sind noch zu ändern";
 }
 
 version();
