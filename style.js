@@ -1,11 +1,11 @@
 const cost1 = ["Raupi", "Zubat", "Hornliu", "Rattfratz", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Sonnkern", "Icognito"
   , "Waumpel", "Zirpurze", "Burmi", "Purmel", "Tarundel"];
 const cost2 = ["Taubsi", "Habitak", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
-  , "Fiffyen", "Zigzachs", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Liebiskus"
+  , "Fiffyen", "Zigzachs", "Knilz", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Liebiskus"
   , "Wadribie", "Bidiza", "Nagelotz", "Dusselgurr", "Irrbis", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
   , "Raffel", "Sensect", "Ferkuli" ];
 const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Kleinstein", "Amonitas", "Kabuto", "Tangela", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", "Tentacha",  "Ponita", "Flegmon", "Magnetilo", "Jurob", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", "Goldini", "Endivie", "Feurigel", "Karnimani", "Togepi", "Lampi", "Yanma", "Remoraid", "Corasonn", "Pichu", "Pii", "Fluffeluff", "Voltilamm", "Griffel", "Traunfugil", "Snubbull", "Baldorfish", "Phanpy", "Farbeagle", "Kussilla"
-  , "Geckarbor", "Flemmli", "Hydropi", "Loturzel", "Zwirrlicht", "Samurzel", "Seemops", "Quiekel", "Botogel", "Schwalbini", "Wingull", "Knilz", "Flurmel", "Makuhita", "Azurill", "Nasgnet", "Eneco", "Zobiris", "Stollunior", "Frizelbliz", "Schluppuck", "Kanivanha", "Wailmer", "Camaub", "Spoink", "Tuska", "Wablu", "Schmerbe", "Krebscorps", "Puppance", "Liliep", "Anorith", "Shuppet", "Isso", "Schneppke", "Perlu"
+  , "Geckarbor", "Flemmli", "Hydropi", "Loturzel", "Zwirrlicht", "Samurzel", "Seemops", "Quiekel", "Botogel", "Schwalbini", "Wingull", "Flurmel", "Makuhita", "Azurill", "Nasgnet", "Eneco", "Zobiris", "Stollunior", "Frizelbliz", "Schluppuck", "Kanivanha", "Wailmer", "Camaub", "Spoink", "Tuska", "Wablu", "Schmerbe", "Krebscorps", "Puppance", "Liliep", "Anorith", "Shuppet", "Isso", "Schneppke", "Perlu"
   , "Chelast", "Panflam", "Plinfa", "Haspiror", "Pachirisu", "Shnebedeck", "Staralili", "Trasla", "Sheinux", "Knospi", "Koknodon", "Schilterus", "Bamelin", "Kikugi", "Schalellos", "Driftlon", "Charmian", "Klingplim", "Skunkapuh", "Bronzel", "Pantimimi", "Hippopotas", "Pionskora", "Glibunkel", "Finneon", "Mantirps"
   , "Serpifeu", "Floink", "Ottaro", "Lichtel", "Laukaps", "Schnuthelm", "Skallyk", "Yorkleff", "Felilou", "Pygraulon", "Vegimak", "Grillmak", "Sodamak", "Somniam", "Elezeba", "Kiesling", "Fleknoil", "Praktibalk", "Schallquap", "Strawickl", "Toxiped", "Waumboll", "Lilminip", "Ganovil", "Lithomith", "Zurrokex", "Makabaja", "Unratütox", "Zorua", "Picochilla", "Mollimorba", "Monozyto", "Piccolente", "Gelatini", "Sesokitz", "Emolga", "Tarnpignon", "Quabbel", "Wattzapf", "Kastadur", "Klikk", "Zapplardin", "Petznief", "Lin-Fu", "Golbit", "Geronimatz"
   , "Igamaro", "Froxy", "Balgoras", "Psiau","Dartiri", "Leufeo", "Flabébé", "Mähikel", "Paragoni", "Pam-Pam", "Parfi", "Flauschling", "Iscalar", "Bithora", "Scampisto", "Eguana", "Amarino", "Arktip"
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 27.07.2024, zuletzt hinzugefügt:Dialga; Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 28.07.2024, zuletzt hinzugefügt: Knilz>Tier 2; Raupy und Zubat sind noch zu ändern";
 }
 
 version();
