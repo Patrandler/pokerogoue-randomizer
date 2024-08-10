@@ -24,7 +24,7 @@ const cost5 = ["Aerodactyl", "Elektek", "Kangama", "Sichlor", "Kicklee", "Magmar
   , "Quartermak", "Koalelu", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", , "Leycrodon", "Lectragon", "GalPorenta", "Pescragon"
   , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
 const cost6 = ["Mew", "Lavados", "Arktos", "Entei", "Suicune", "Raikou", "Registeel", "Regice", "Darkrai", "Cresselia", "Shaymin", "Heatran", "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Keldeo", "Voltriant", "Anego", "Kaguron", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz", "Eisenhals", "Eisenhaupt", "Eisenbündel"]
-const cost7 = ["Victini", "Demeteros", "Hoopa", "Magearna", "Katagami", "Marshadow", "Cupidos", "Phantoross", "Ursaluna"]
+const cost7 = ["Jirachi", "Victini", "Demeteros", "Hoopa", "Magearna", "Katagami", "Venicro", "Marshadow", "Cupidos", "Phantoross", "Ursaluna"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Dialga", "Kyurem", "Zekrom", "Zygarde", "Necrozma", "Coronospa"]
 const cost9 = ["Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 04.08.2024, zuletzt hinzugefügt: Kaguron; Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 10.08.2024, zuletzt hinzugefügt: Jirachi, Venicro; Raupy und Zubat sind noch zu ändern";
 }
 
 version();
