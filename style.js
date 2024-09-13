@@ -23,7 +23,7 @@ const cost4 = ["Pikachu", "Sterndu", "Owei", "Pipi", "Porygon", "Menki", "Mauzi"
 const cost5 = ["Aerodactyl", "Elektek", "Mew", "Kangama", "Sichlor", "Kicklee", "Magmar", "Tauros", "Lapras", "Relaxo", "Skaraborn", "Miltank", "Sengo", "Absol", "Kryppuk", "Rotom", "Symvolara", "Frigometri", "Fermicula", "Karadonis", "Jiutesto", "Shardrago", "Bisofank", "Floette"
   , "Quartermak", "Typ: Null", "Kommandutan", "Meteno", "Mimigma", "Sen-Long", "Moruda", "Tortunator", "Knirfish", , "Leycrodon", "Lectragon", "Pescragon"
   , "Mopex", "Nigiragi", "Gierspenst", "PalTauros", "Heerashai"]
-const cost6 = ["Lavados", "Arktos", "Entei", "Suicune", "Raikou", "Registeel", "Regirock", "Regice", "Darkrai", "Cresselia", "Shaymin", "Heatran", "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Keldeo", "Voltriant", "Anego", "Kaguron", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz", "Eisenhals", "Eisenhaupt", "Eisenbündel", "Eisendorn"]
+const cost6 = ["Lavados", "Arktos", "Entei", "Suicune", "Raikou", "Registeel", "Regirock", "Regice", "Darkrai", "Cresselia", "Shaymin", "Heatran", "Selfe", "Tobutz", "Vesprit", "Terrakium", "Meloetta", "Viridium", "Genesect", "Keldeo", "Volcanion", "Voltriant", "Anego", "Kaguron", "Muramura", "Kapu-Riki", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Furienblitz", "Eisenhals", "Eisenhaupt", "Eisenbündel", "Eisendorn", "Sandfell","Infamomo"]
 const cost7 = ["Jirachi", "Manaphy", "Victini", "Demeteros", "Hoopa", "Magearna", "Katagami", "Venicro", "Marshadow", "Cupidos", "Phantoross", "Ursaluna", "Ogerpon"]
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Dialga", "Kyurem", "Zekrom", "Zygarde", "Necrozma", "Coronospa"]
 const cost9 = ["Arceus"]
@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 13.09.2024, zuletzt hinzugefügt: Manaphy, Regirock, Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 13.09.2024, zuletzt hinzugefügt: Infamomo, Regirock, Raupy und Zubat sind noch zu ändern";
 }
 
 version();
