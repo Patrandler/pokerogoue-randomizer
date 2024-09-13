@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 13.09.2024, zuletzt hinzugefügt: Mew Kosten, Regirock, Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 13.09.2024, zuletzt hinzugefügt: Manaphy, Regirock, Raupy und Zubat sind noch zu ändern";
 }
 
 version();
