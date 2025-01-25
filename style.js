@@ -203,7 +203,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 07.10.2024, zuletzt hinzugefügt: Eisenblatt etc., Raupy und Zubat sind noch zu ändern";
+  document.getElementById("version").textContent = "Version vom 25.01.2024, zuletzt hinzugefügt: Diancie etc., Raupy und Zubat sind noch zu ändern";
 }
 
 version();
