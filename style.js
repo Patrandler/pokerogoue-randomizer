@@ -1,10 +1,3 @@
-<p id="pokemon">Dein Team ist:</p>
-<p id="ersatz">Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:</p>
-<p id="bonus"></p>
-
-<button onclick="myFunction()">Generiere neues Team</button>
-
-<script>
 const cost1 = ["Raupi", "Zubat", "Hornliu", "Jurob", "Rattfratz", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Icognito"
   , "Waumpel", "Eneco", "Schluppuck", "Zirpurze", "Burmi", "Purmel", "Kikugi", "Finneon", "Kleptifux", "Tarundel"];
 const cost2 = ["Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
@@ -35,215 +28,185 @@ const cost7 = ["Jirachi", "Diancie", "Deoxys", "Manaphy", "Latias", "Victini", "
 const cost8 = [ "Mewto", "Ho-Oh", "Palkia", "Dialga", "Kyurem", "Zekrom", "Zygarde", "Yveltal", "Necrozma", "Coronospa", "Zamazenta"]
 const cost9 = ["Groudon", "Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
-const costLists = {
-    1: cost1,
-    2: cost2,
-    3: cost3,
-    4: cost4,
-    5: cost5,
-    6: cost6,
-    7: cost7,
-    8: cost8,
-    9: cost9
-};
 
 
 let pointCounter = 0;
 let gotBonus = false;
-let teamPokemon = []; // Array to store the current team's Pokemon objects
-
-// --- Cookie functions ---
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-  const expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-function getCookie(name) {
-  const cookieName = name + "=";
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const cookieArray = decodedCookie.split(';');
-  for(let i = 0; i <cookieArray.length; i++) {
-    let cookie = cookieArray[i];
-    while (cookie.charAt(0) === ' ') {
-      cookie = cookie.substring(1);
-    }
-    if (cookie.indexOf(cookieName) === 0) {
-      return cookie.substring(cookieName.length, cookie.length);
-    }
-  }
-  return "";
-}
-
-function deleteCookie(name) {
-  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-}
-
-function getCheckedPokemon() {
-    const cookieValue = getCookie("checkedPokemon");
-    return cookieValue ? cookieValue.split(',') : [];
-}
-
-function updateCheckedPokemonCookie(pokemonName, isChecked) {
-    let checkedPokemon = getCheckedPokemon();
-    if (isChecked) {
-        if (!checkedPokemon.includes(pokemonName)) {
-            checkedPokemon.push(pokemonName);
-        }
-    } else {
-        checkedPokemon = checkedPokemon.filter(name => name !== pokemonName);
-    }
-    setCookie("checkedPokemon", checkedPokemon.join(','), 365); // Cookie expires in 365 days
-}
-
 
 function randomizer(max) {
   return Math.floor(Math.random() * max) + 1;
 }
 
 function pickItem(list) {
-    let availablePokemon = list;
-    const checkedPokemon = getCheckedPokemon();
-    availablePokemon = availablePokemon.filter(pokemon => !checkedPokemon.includes(pokemon));
-
-    if (availablePokemon.length === 0) {
-        // If no Pokemon left in the list after filtering, return null or handle as needed.
-        // For now, let's return a message, you might want to handle this differently.
-        return null; // Or throw an error, or return a default Pokemon.
-    }
-
-  const randomIndex = randomizer(availablePokemon.length) - 1;
-  return availablePokemon[randomIndex];
+  const randomIndex = randomizer(list.length) - 1; // Adjust for zero-based indexing
+  return list[randomIndex];
 }
-
-
-function replacePokemon(pokemonName, cost) {
-    let newList = costLists[cost];
-    let newPokemonName;
-    do {
-        newPokemonName = pickItem(newList);
-        if (newPokemonName === null) {
-            alert("Keine Pokemon mehr verfügbar mit diesen Kosten! Bitte lösche einige Checkmarks."); //Inform user and stop replacement
-            return; // Exit the function if no pokemon is available
-        }
-    } while (newPokemonName === pokemonName); // Ensure we don't get the same Pokemon again immediately
-
-    const pokemonIndex = teamPokemon.findIndex(p => p.name === pokemonName);
-    if (pokemonIndex !== -1) {
-        teamPokemon[pokemonIndex] = { name: newPokemonName, cost: cost }; // Update teamPokemon array
-
-        // Update the displayed Pokemon list
-        const pokemonElementLabel = document.querySelector(`#pokemon label[data-pokemon-name="${pokemonName}"]`);
-        if (pokemonElementLabel) {
-            pokemonElementLabel.setAttribute('data-pokemon-name', newPokemonName); // Update data attribute
-            const checkbox = pokemonElementLabel.querySelector('input[type="checkbox"]');
-            checkbox.value = newPokemonName; // Update checkbox value
-            pokemonElementLabel.childNodes[2].textContent = `${newPokemonName} (${cost} Punkte)`; // Update text node (Pokemon name and points)
-        }
-    }
-}
-
-
-function handleCheckboxChange(event) {
-    const checkbox = event.target;
-    const pokemonName = checkbox.value;
-    const isChecked = checkbox.checked;
-    const pokemonLabel = checkbox.closest('label');
-    const pokemonCost = parseInt(pokemonLabel.textContent.match(/\((\d+) Punkte\)/)[1]); //Extract cost from label text
-
-    updateCheckedPokemonCookie(pokemonName, isChecked);
-
-    if (isChecked) {
-        replacePokemon(pokemonName, pokemonCost);
-    }
-}
-
 
 function myFunction() {
   pointCounter = 0;
   gotBonus = false;
-  teamPokemon = []; // Clear the team array for a new team
   document.getElementById("bonus").textContent = "";
-  document.getElementById("pokemon").textContent = "Dein Team ist:"; //Clear previous content, set title
+  document.getElementById("pokemon").textContent = "Dein Team ist:";
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
-
-  let pokemonHTML = "Dein Team ist:<br>"; // Initialize HTML string for pokemon display
-
   while (pointCounter < 10) {
-    let firstPick = randomizer(33);
-    let chosenItemName = null;
-    let itemCost = 0;
-    let currentCostList = [];
 
+    let firstPick = randomizer(33);
+    /*do {
+      firstPick = randomizer(8);
+      // Check for overflow with all possibilities (assuming pointCounter starts at 0)
+    } while ( (firstPick === 1 && pointCounter + 3 > 10) ||
+      (firstPick === 2 && pointCounter + 2 > 10) ||
+      (firstPick === 3 && pointCounter + 3 > 10) ||
+      (firstPick === 4 && pointCounter + 4 > 10) ||
+      (firstPick === 5 && pointCounter + 5 > 10) ||
+      (firstPick === 6 && pointCounter + 6 > 10) ||
+      (firstPick === 7 && pointCounter + 8 > 10)
+      // ... add checks for all other options (4, 5, 6, 7)
+      );*/
 
     if (firstPick >= 0 && firstPick <= 5) {
-      itemCost = 3;
-      currentCostList = cost3;
+      pointCounter += 3;
+      const chosenItem = pickItem(cost3);
+      document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
+
     } else if (firstPick >= 6 && firstPick <= 11) {
-      itemCost = 2;
-      currentCostList = cost2;
+      const chosenItem = pickItem(cost2);
+      document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
+      pointCounter += 2;
     } else if (firstPick >= 12 && firstPick <= 17) {
-      itemCost = 1;
-      currentCostList = cost1;
-    } else if (firstPick >= 18 && firstPick <= 23) {
-      itemCost = 4;
-      currentCostList = cost4;
-    } else if (firstPick >= 24 && firstPick <= 28) {
-      itemCost = 5;
-      currentCostList = cost5;
-    } else if (firstPick === 29) {
-      itemCost = 6;
-      currentCostList = cost6;
-    } else if (firstPick === 30) {
-      itemCost = 8;
-      currentCostList = cost8;
-    } else if (firstPick === 31) {
-      itemCost = 7;
-      currentCostList = cost7;
+      const chosenItem = pickItem(cost1);
+      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";
+      pointCounter += 1;
+    }
+    else if (firstPick >= 18 && firstPick <= 23) {
+      const chosenItem = pickItem(cost4);
+      document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
+      pointCounter += 4;
+    }
+
+    else if (firstPick >= 24 && firstPick <= 28) {
+      const chosenItem = pickItem(cost5);
+      document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
+      pointCounter += 5;
+    }
+
+    else if (firstPick === 29) {
+      const chosenItem = pickItem(cost6);
+      document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
+      pointCounter += 6;
+    }
+    else if (firstPick === 30) {
+      const chosenItem = pickItem(cost8);
+      document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
+      pointCounter += 8;
+    }
+
+    else if (firstPick === 31) {
+      const chosenItem = pickItem(cost7);
+      document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
+      pointCounter += 7;
     }  else if (firstPick === 32) {
-      itemCost = 9;
-      currentCostList = cost9;
+      const chosenItem = pickItem(cost9);
+      document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
+      pointCounter += 9;
+
+
     } else if(firstPick === 33 && gotBonus===false) {
-      const chosenType = pickItem(pokemonTypes);
+      const chosenItem = pickItem(pokemonTypes);
       const pokeGen = (Math.floor(Math.random() * 9)+1);
       const pokeGen2 = (Math.floor(Math.random() * 9)+1);
       if (pokeGen !== pokeGen2) {
-        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenType + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
+        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
         gotBonus = true;
       }
-      itemCost = 0; // Bonus doesn't add to point count
+      pointCounter+=0;
+
+    }}
+
+  document.getElementById("ersatz").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
+
+}
+
+function myFunction2() {
+  pointCounter = 0;
+  document.getElementById("pokemon2").textContent = "Dein Team ist:";
+  document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
+  while (pointCounter < 10) {
+
+    let firstPick = randomizer(23);
+    /*do {
+      firstPick = randomizer(8);
+      // Check for overflow with all possibilities (assuming pointCounter starts at 0)
+    } while ( (firstPick === 1 && pointCounter + 3 > 10) ||
+      (firstPick === 2 && pointCounter + 2 > 10) ||
+      (firstPick === 3 && pointCounter + 3 > 10) ||
+      (firstPick === 4 && pointCounter + 4 > 10) ||
+      (firstPick === 5 && pointCounter + 5 > 10) ||
+      (firstPick === 6 && pointCounter + 6 > 10) ||
+      (firstPick === 7 && pointCounter + 8 > 10)
+      // ... add checks for all other options (4, 5, 6, 7)
+      );*/
+
+    if ((firstPick >= 0 && firstPick <= 5) && pointCounter <= 7){
+      pointCounter += 3;
+      const chosenItem = pickItem(cost3);
+      document.getElementById("pokemon2").textContent += chosenItem + " (3 Punkte)";
+
+    } else if ((firstPick >= 6 && firstPick <= 7) && pointCounter <= 8){
+      const chosenItem = pickItem(cost2);
+      document.getElementById("pokemon2").textContent += chosenItem + " (2 Punkte)";
+      pointCounter += 2;
+    } else if (firstPick >= 9 && firstPick <= 9) {
+      const chosenItem = pickItem(cost1);
+      document.getElementById("pokemon2").textContent += chosenItem + " (1 Punkt)";
+      pointCounter += 1;
+    }
+    else if ((firstPick >= 11 && firstPick <= 14) && pointCounter <= 6) {
+      const chosenItem = pickItem(cost4);
+      document.getElementById("pokemon2").textContent += chosenItem + " (4 Punkte)";
+      pointCounter += 4;
     }
 
-    if (itemCost > 0) {
-        chosenItemName = pickItem(currentCostList);
-        if (chosenItemName) { // Check if pickItem returned a Pokemon (not null)
-            pointCounter += itemCost;
-            teamPokemon.push({ name: chosenItemName, cost: itemCost }); // Add to teamPokemon array
+    else if ((firstPick >= 15 && firstPick <= 19) && pointCounter <= 5){
+      const chosenItem = pickItem(cost5);
+      document.getElementById("pokemon2").textContent += chosenItem + " (5 Punkte)";
+      pointCounter += 5;
+    }
 
-            pokemonHTML += `<label data-pokemon-name="${chosenItemName}">
-                               <input type="checkbox" value="${chosenItemName}" onchange="handleCheckboxChange(event)">
-                               ${chosenItemName} (${itemCost} Punkte)
-                            </label><br>`;
-        } else {
-            // Handle case where no Pokemon could be picked (e.g., all checked)
-            console.warn("No Pokemon available for cost " + itemCost + ". Please uncheck some Pokemon.");
-            break; // Stop generating the team as no more Pokemon are available for this cost.
-        }
+    else if ((firstPick === 20) && pointCounter <= 4){
+      const chosenItem = pickItem(cost6);
+      document.getElementById("pokemon2").textContent += chosenItem + " (6 Punkte)";
+      pointCounter += 6;
+    }
+
+    else if ((firstPick === 21) && pointCounter <=2) {
+      const chosenItem = pickItem(cost8);
+      document.getElementById("pokemon2").textContent += chosenItem + " (8 Punkte)";
+      pointCounter += 8;
+    } else if ((firstPick=== 22) && pointCounter <= 3) {
+      const chosenItem = pickItem(cost7);
+      document.getElementById("pokemon2").textContent += chosenItem + " (7 Punkte)";
+      pointCounter += 7;
+    } else if ((firstPick=== 23) && pointCounter <= 1) {
+      const chosenItem = pickItem(cost9);
+      document.getElementById("pokemon2").textContent += chosenItem + " (9 Punkte)";
+      pointCounter += 9;
+    }
+
+    else {
+      pointCounter += 0;
     }
   }
 
-  document.getElementById("pokemon").innerHTML = pokemonHTML; // Set HTML content to display Pokemon with checkboxes
+  document.getElementById("ersatz2").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 
-  document.getElementById("ersatz").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 }
 
-// Initialize on page load (optional, if you want to load a team immediately)
-// myFunction();
-</script>
+function version () {
+  document.getElementById("version").textContent = "Version vom 08.02.2024, zuletzt hinzugefügt: Zeraora, Arktos-G, Raupy und Zubat sind noch zu ändern";
+}
 
-</body>
-</html>
+version();
 
 
 /*function myFunction() {
