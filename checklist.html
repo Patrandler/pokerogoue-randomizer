@@ -5,23 +5,23 @@
 </head>
 <body>
 
-<h1>Checklist</h1>
+<h1>2-Kosten</h1>
 
-<label>Gen2</label><br>
 <div id="objectList">"Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
   , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
   , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
-  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</div> <br><br>  <div id="checklist"></div>
+  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</div><br><br>
 
-<button onclick="createChecklist()">Create Checklist</button>
+<div id="checklist"></div>
+
 <button onclick="processChecklist()">Submit</button>
 
 <div id="result"></div>
 
 <script>
 function createChecklist() {
-    const objectListDiv = document.getElementById("objectList"); // Get the div
-    const objects = objectListDiv.textContent.split(",").map(item => item.trim()); // Get text content
+    const objectListDiv = document.getElementById("objectList");
+    const objects = objectListDiv.textContent.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     checklistDiv.innerHTML = "";
 
@@ -84,6 +84,3 @@ function processChecklist() {
 window.addEventListener('DOMContentLoaded', createChecklist);
 
 </script>
-
-</body>
-</html>
