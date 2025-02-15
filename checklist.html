@@ -12,18 +12,14 @@
   , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
   , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</div><br><br>
 
-<div id="checklist"></div>
-
 <button onclick="processChecklist()">Submit</button>
 
 <div id="result"></div>
 
 <script>
-function createChecklist() {
-    const objectListDiv = document.getElementById("objectList");
-    const objects = objectListDiv.textContent.split(",").map(item => item.trim());
+function createChecklist(objects) { // Now takes the objects array as an argument
     const checklistDiv = document.getElementById("checklist");
-    checklistDiv.innerHTML = "";
+    checklistDiv.innerHTML = ""; // Clear previous checklist
 
     objects.forEach(object => {
         const checkbox = document.createElement("input");
@@ -80,7 +76,12 @@ function processChecklist() {
     document.getElementById("result").textContent = resultText;
 }
 
-// Initialize the checklist when the page loads
-window.addEventListener('DOMContentLoaded', createChecklist);
+// Initialize the checklist with the fixed list.
+const fixedList = "Item 1, Item 2, Item 3"; // Your fixed list here
+document.getElementById("objectList").textContent = fixedList; // Set the text in the div
+window.addEventListener('DOMContentLoaded', () => createChecklist(fixedList.split(",").map(item => item.trim()))); // Pass the objects to createChecklist
 
 </script>
+
+</body>
+</html>
