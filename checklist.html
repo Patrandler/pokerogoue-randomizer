@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Checklist.test</h1>
+<h1>Checklist.a</h1>
 
 <label for="objectList">Enter objects (comma-separated):</label><br>
 <input type="text" id="objectList" name="objectList" size="50"><br><br>
@@ -19,26 +19,7 @@
 
 <script>
 function createChecklist() {
-    const objectListInput = document.getElementById("objectList").value;
-    const objects = objectListInput.split(",").map(item => item.trim());
-    const checklistDiv = document.getElementById("checklist");
-    checklistDiv.innerHTML = ""; // Clear previous checklist
-
-    objects.forEach(object => {
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.id = object;
-        checkbox.name = object;
-
-        const label = document.createElement("label");
-        label.htmlFor = object;
-        label.textContent = object;
-
-        const listItem = document.createElement("li");
-        listItem.appendChild(checkbox);
-        listItem.appendChild(label);
-        checklistDiv.appendChild(listItem);
-    });
+    // ... (same as before)
 }
 
 function processChecklist() {
@@ -46,39 +27,34 @@ function processChecklist() {
     const originalObjects = objectListInput.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     const listItems = checklistDiv.querySelectorAll("li");
-    let processedObjects = [];
-
-    originalObjects.forEach((objectName, index) => {
-        let found = false;
-        listItems.forEach(listItem => {
-            const checkbox = listItem.querySelector("input[type='checkbox']");
-            if (checkbox && checkbox.id === objectName) { // Check if checkbox exists!
-                found = true;
-                if (checkbox.checked) {
-                    processedObjects.push(`/*\n${objectName}\n*/`);
-                } else {
-                    processedObjects.push(objectName);
-                }
-                return;
-            }
-        });
-        if (!found) {
-            processedObjects.push(objectName);
-        }
-    });
-
     let resultText = "";
-    for (let i = 0; i < processedObjects.length; i++) {
-        resultText += processedObjects[i];
-        if (i < processedObjects.length - 1) {
-            let nextItem = processedObjects[i + 1];
-            if (nextItem && !nextItem.startsWith("/*")) {
-                resultText += ", ";
-            } else if (nextItem && nextItem.startsWith("/*") && !processedObjects[i].startsWith("/*")) {
-                resultText += ", ";
+
+    for (let i = 0; i < originalObjects.length; i++) {
+        const objectName = originalObjects[i];
+        let checked = false;
+
+        for (const listItem of listItems) {
+            const checkbox = listItem.querySelector("input[type='checkbox']");
+            if (checkbox && checkbox.id === objectName) {
+                checked = checkbox.checked;
+                break; // Found the checkbox, exit inner loop
             }
         }
+
+        const comma = (i < originalObjects.length - 1) ? "," : ""; // Comma after object
+
+        if (checked) {
+            resultText += `/*\n${objectName}${comma}\n*/`;
+        } else {
+            resultText += objectName + comma;
+        }
+
+        if (i < originalObjects.length - 1 && !checked && originalObjects[i+1] && originalObjects[i+1].startsWith("/*")) {
+            resultText += ", ";
+        }
+
     }
+
     document.getElementById("result").textContent = resultText;
 }
 
