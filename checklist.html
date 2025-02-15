@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Checklist.23</h1>
+<h1>Checklist.test</h1>
 
 <label for="objectList">Enter objects (comma-separated):</label><br>
 <input type="text" id="objectList" name="objectList" size="50"><br><br>
@@ -19,7 +19,26 @@
 
 <script>
 function createChecklist() {
-  // ... (same as before)
+    const objectListInput = document.getElementById("objectList").value;
+    const objects = objectListInput.split(",").map(item => item.trim());
+    const checklistDiv = document.getElementById("checklist");
+    checklistDiv.innerHTML = ""; // Clear previous checklist
+
+    objects.forEach(object => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = object;
+        checkbox.name = object;
+
+        const label = document.createElement("label");
+        label.htmlFor = object;
+        label.textContent = object;
+
+        const listItem = document.createElement("li");
+        listItem.appendChild(checkbox);
+        listItem.appendChild(label);
+        checklistDiv.appendChild(listItem);
+    });
 }
 
 function processChecklist() {
@@ -33,7 +52,7 @@ function processChecklist() {
         let found = false;
         listItems.forEach(listItem => {
             const checkbox = listItem.querySelector("input[type='checkbox']");
-            if (checkbox.id === objectName) {
+            if (checkbox && checkbox.id === objectName) { // Check if checkbox exists!
                 found = true;
                 if (checkbox.checked) {
                     processedObjects.push(`/*\n${objectName}\n*/`);
@@ -48,15 +67,14 @@ function processChecklist() {
         }
     });
 
-    // Join with commas, handling commented-out items correctly
     let resultText = "";
     for (let i = 0; i < processedObjects.length; i++) {
         resultText += processedObjects[i];
         if (i < processedObjects.length - 1) {
-            let nextItem = processedObjects[i+1];
-            if (!nextItem.startsWith("/*")) { // Only add comma if the next item is NOT commented out
+            let nextItem = processedObjects[i + 1];
+            if (nextItem && !nextItem.startsWith("/*")) {
                 resultText += ", ";
-            } else if (nextItem.startsWith("/*") && !processedObjects[i].startsWith("/*")) {
+            } else if (nextItem && nextItem.startsWith("/*") && !processedObjects[i].startsWith("/*")) {
                 resultText += ", ";
             }
         }
