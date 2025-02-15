@@ -7,13 +7,11 @@
 
 <h1>Checklist</h1>
 
-<label for="objectList">"Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
+<label>Gen2</label><br>
+<div id="objectList">"Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
   , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
   , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
-  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</label><br>
-<textarea id="objectList" name="objectList" rows="4" cols="50">Item 1, Item 2, Item 3</textarea><br><br>
-
-<div id="checklist"></div>
+  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</div> <br><br>  <div id="checklist"></div>
 
 <button onclick="createChecklist()">Create Checklist</button>
 <button onclick="processChecklist()">Submit</button>
@@ -22,8 +20,8 @@
 
 <script>
 function createChecklist() {
-    const objectListInput = document.getElementById("objectList").value;
-    const objects = objectListInput.split(",").map(item => item.trim());
+    const objectListDiv = document.getElementById("objectList"); // Get the div
+    const objects = objectListDiv.textContent.split(",").map(item => item.trim()); // Get text content
     const checklistDiv = document.getElementById("checklist");
     checklistDiv.innerHTML = "";
 
@@ -45,8 +43,8 @@ function createChecklist() {
 }
 
 function processChecklist() {
-    const objectListInput = document.getElementById("objectList").value;
-    const originalObjects = objectListInput.split(",").map(item => item.trim());
+    const objectListDiv = document.getElementById("objectList");
+    const originalObjects = objectListDiv.textContent.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     const listItems = checklistDiv.querySelectorAll("li");
     let checkedObjects = [];
@@ -82,7 +80,7 @@ function processChecklist() {
     document.getElementById("result").textContent = resultText;
 }
 
-// Initialize the checklist with the default values in the textarea when the page loads.
+// Initialize the checklist when the page loads
 window.addEventListener('DOMContentLoaded', createChecklist);
 
 </script>
