@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Checklist.a</h1>
+<h1>Checklist</h1>
 
 <label for="objectList">Enter objects (comma-separated):</label><br>
 <input type="text" id="objectList" name="objectList" size="50"><br><br>
@@ -19,7 +19,26 @@
 
 <script>
 function createChecklist() {
-    // ... (same as before)
+    const objectListInput = document.getElementById("objectList").value;
+    const objects = objectListInput.split(",").map(item => item.trim());
+    const checklistDiv = document.getElementById("checklist");
+    checklistDiv.innerHTML = ""; // Clear previous checklist
+
+    objects.forEach(object => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = object;
+        checkbox.name = object;
+
+        const label = document.createElement("label");
+        label.htmlFor = object;
+        label.textContent = object;
+
+        const listItem = document.createElement("li");
+        listItem.appendChild(checkbox);
+        listItem.appendChild(label);
+        checklistDiv.appendChild(listItem);
+    });
 }
 
 function processChecklist() {
@@ -27,33 +46,35 @@ function processChecklist() {
     const originalObjects = objectListInput.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     const listItems = checklistDiv.querySelectorAll("li");
-    let resultText = "";
+    let checkedObjects = [];
+    let uncheckedObjects = [];
 
-    for (let i = 0; i < originalObjects.length; i++) {
-        const objectName = originalObjects[i];
+    originalObjects.forEach(objectName => {
         let checked = false;
-
         for (const listItem of listItems) {
             const checkbox = listItem.querySelector("input[type='checkbox']");
             if (checkbox && checkbox.id === objectName) {
                 checked = checkbox.checked;
-                break; // Found the checkbox, exit inner loop
+                break;
             }
         }
 
-        const comma = (i < originalObjects.length - 1) ? "," : ""; // Comma after object
-
         if (checked) {
-            resultText += `/*\n${objectName}${comma}\n*/`;
+            checkedObjects.push(objectName);
         } else {
-            resultText += objectName + comma;
+            uncheckedObjects.push(objectName);
         }
+    });
 
-        if (i < originalObjects.length - 1 && !checked && originalObjects[i+1] && originalObjects[i+1].startsWith("/*")) {
-            resultText += ", ";
-        }
+    let resultText = "";
 
+    if (checkedObjects.length > 0) {
+        resultText += "/*\n";
+        resultText += checkedObjects.join(",\n"); // Comma-separated within the comment
+        resultText += "\n*/\n";
     }
+
+    resultText += uncheckedObjects.join(", "); // Comma-separated remaining objects
 
     document.getElementById("result").textContent = resultText;
 }
