@@ -7,8 +7,11 @@
 
 <h1>Checklist</h1>
 
-<label for="objectList">Enter objects (comma-separated):</label><br>
-<input type="text" id="objectList" name="objectList" size="50"><br><br>
+<label for="objectList">"Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
+  , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
+  , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
+  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</label><br>
+<textarea id="objectList" name="objectList" rows="4" cols="50">Item 1, Item 2, Item 3</textarea><br><br>
 
 <div id="checklist"></div>
 
@@ -22,7 +25,7 @@ function createChecklist() {
     const objectListInput = document.getElementById("objectList").value;
     const objects = objectListInput.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
-    checklistDiv.innerHTML = ""; // Clear previous checklist
+    checklistDiv.innerHTML = "";
 
     objects.forEach(object => {
         const checkbox = document.createElement("input");
@@ -70,14 +73,17 @@ function processChecklist() {
 
     if (checkedObjects.length > 0) {
         resultText += "/*\n";
-        resultText += checkedObjects.join(",\n"); // Comma-separated within the comment
+        resultText += checkedObjects.join(",\n");
         resultText += "\n*/\n";
     }
 
-    resultText += uncheckedObjects.join(", "); // Comma-separated remaining objects
+    resultText += uncheckedObjects.join(", ");
 
     document.getElementById("result").textContent = resultText;
 }
+
+// Initialize the checklist with the default values in the textarea when the page loads.
+window.addEventListener('DOMContentLoaded', createChecklist);
 
 </script>
 
