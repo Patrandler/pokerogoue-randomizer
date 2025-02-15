@@ -27,14 +27,14 @@ function createChecklist() {
   objects.forEach(object => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.id = object; // Use object as ID for easy access later
+    checkbox.id = object;
     checkbox.name = object;
 
     const label = document.createElement("label");
     label.htmlFor = object;
     label.textContent = object;
 
-    const listItem = document.createElement("li"); // Use list for better formatting
+    const listItem = document.createElement("li");
     listItem.appendChild(checkbox);
     listItem.appendChild(label);
     checklistDiv.appendChild(listItem);
@@ -42,24 +42,37 @@ function createChecklist() {
 }
 
 function processChecklist() {
+    const objectListInput = document.getElementById("objectList").value;
+    const originalObjects = objectListInput.split(",").map(item => item.trim()); // Keep original order and commas
     const checklistDiv = document.getElementById("checklist");
-    const resultDiv = document.getElementById("result");
-    const listItems = checklistDiv.querySelectorAll("li"); // Get all list items
+    const listItems = checklistDiv.querySelectorAll("li");
     let resultText = "";
+    let processedObjects = []; // To track processed objects in original order
 
-    listItems.forEach(listItem => {
-        const checkbox = listItem.querySelector("input[type='checkbox']");
-        const objectName = checkbox.id; // Get object name from checkbox ID
-        const isChecked = checkbox.checked;
-
-        if (isChecked) {
-            resultText += "// " + objectName + "\n"; // Comment out checked items
-        } else {
-            resultText += objectName + "\n";       // Keep unchecked items
+    originalObjects.forEach(objectName => {
+        let found = false;
+        listItems.forEach(listItem => {
+            const checkbox = listItem.querySelector("input[type='checkbox']");
+            if (checkbox.id === objectName) {
+                found = true;
+                if (checkbox.checked) {
+                    processedObjects.push(`/*
+${objectName}
+*/`);
+                } else {
+                    processedObjects.push(objectName);
+                }
+                return; // Exit inner loop once found
+            }
+        });
+        if (!found) { // Handle cases where object might have been removed
+            processedObjects.push(objectName);
         }
     });
 
-    resultDiv.textContent = resultText;
+    resultText = processedObjects.join(", "); // Join with commas
+
+    document.getElementById("result").textContent = resultText;
 }
 
 </script>
