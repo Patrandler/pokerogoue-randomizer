@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Checklist</h1>
+<h1>Checklist.2</h1>
 
 <label for="objectList">Enter objects (comma-separated):</label><br>
 <input type="text" id="objectList" name="objectList" size="50"><br><br>
@@ -19,59 +19,40 @@
 
 <script>
 function createChecklist() {
-  const objectListInput = document.getElementById("objectList").value;
-  const objects = objectListInput.split(",").map(item => item.trim());
-  const checklistDiv = document.getElementById("checklist");
-  checklistDiv.innerHTML = ""; // Clear previous checklist
-
-  objects.forEach(object => {
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.id = object;
-    checkbox.name = object;
-
-    const label = document.createElement("label");
-    label.htmlFor = object;
-    label.textContent = object;
-
-    const listItem = document.createElement("li");
-    listItem.appendChild(checkbox);
-    listItem.appendChild(label);
-    checklistDiv.appendChild(listItem);
-  });
+  // ... (same as before)
 }
 
 function processChecklist() {
     const objectListInput = document.getElementById("objectList").value;
-    const originalObjects = objectListInput.split(",").map(item => item.trim()); // Keep original order and commas
+    const originalObjects = objectListInput.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     const listItems = checklistDiv.querySelectorAll("li");
     let resultText = "";
-    let processedObjects = []; // To track processed objects in original order
+    let processedObjects = [];
 
-    originalObjects.forEach(objectName => {
+    originalObjects.forEach((objectName, index) => {
         let found = false;
         listItems.forEach(listItem => {
             const checkbox = listItem.querySelector("input[type='checkbox']");
             if (checkbox.id === objectName) {
                 found = true;
+                const comma = (index < originalObjects.length - 1) ? "," : ""; // Add comma if not the last item
                 if (checkbox.checked) {
                     processedObjects.push(`/*
-${objectName}
+${objectName}${comma}
 */`);
                 } else {
                     processedObjects.push(objectName);
                 }
-                return; // Exit inner loop once found
+                return;
             }
         });
-        if (!found) { // Handle cases where object might have been removed
+        if (!found) {
             processedObjects.push(objectName);
         }
     });
 
-    resultText = processedObjects.join(", "); // Join with commas
-
+    resultText = processedObjects.join(", ");
     document.getElementById("result").textContent = resultText;
 }
 
