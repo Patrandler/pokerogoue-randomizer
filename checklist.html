@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checklist Program</title>
+</head>
+<body>
+
+<h1>Checklist</h1>
+
+<label for="objectList">Enter objects (comma-separated):</label><br>
+<input type="text" id="objectList" name="objectList" size="50"><br><br>
+
+<div id="checklist"></div>
+
+<button onclick="createChecklist()">Create Checklist</button>
+<button onclick="processChecklist()">Submit</button>
+
+<div id="result"></div>
+
+<script>
+function createChecklist() {
+  const objectListInput = document.getElementById("objectList").value;
+  const objects = objectListInput.split(",").map(item => item.trim());
+  const checklistDiv = document.getElementById("checklist");
+  checklistDiv.innerHTML = ""; // Clear previous checklist
+
+  objects.forEach(object => {
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = object; // Use object as ID for easy access later
+    checkbox.name = object;
+
+    const label = document.createElement("label");
+    label.htmlFor = object;
+    label.textContent = object;
+
+    const listItem = document.createElement("li"); // Use list for better formatting
+    listItem.appendChild(checkbox);
+    listItem.appendChild(label);
+    checklistDiv.appendChild(listItem);
+  });
+}
+
+function processChecklist() {
+    const checklistDiv = document.getElementById("checklist");
+    const resultDiv = document.getElementById("result");
+    const listItems = checklistDiv.querySelectorAll("li"); // Get all list items
+    let resultText = "";
+
+    listItems.forEach(listItem => {
+        const checkbox = listItem.querySelector("input[type='checkbox']");
+        const objectName = checkbox.id; // Get object name from checkbox ID
+        const isChecked = checkbox.checked;
+
+        if (isChecked) {
+            resultText += "// " + objectName + "\n"; // Comment out checked items
+        } else {
+            resultText += objectName + "\n";       // Keep unchecked items
+        }
+    });
+
+    resultDiv.textContent = resultText;
+}
+
+</script>
+
+</body>
+</html>
