@@ -7,10 +7,7 @@
 
 <h1>2-Kosten</h1>
 
-<div id="objectList">"Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
-  , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
-  , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
-  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"</div><br><br>
+<div id="objectList"></div><br><br>
 
 <button onclick="processChecklist()">Submit</button>
 
@@ -77,7 +74,10 @@ function processChecklist() {
 }
 
 // Initialize the checklist with the fixed list.
-const fixedList = "Item 1, Item 2, Item 3"; // Your fixed list here
+const fixedList = "Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
+  , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
+  , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
+  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli"; // Your fixed list here
 document.getElementById("objectList").textContent = fixedList; // Set the text in the div
 window.addEventListener('DOMContentLoaded', () => createChecklist(fixedList.split(",").map(item => item.trim()))); // Pass the objects to createChecklist
 
