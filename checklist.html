@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Checklist.2</h1>
+<h1>Checklist.23</h1>
 
 <label for="objectList">Enter objects (comma-separated):</label><br>
 <input type="text" id="objectList" name="objectList" size="50"><br><br>
@@ -27,7 +27,6 @@ function processChecklist() {
     const originalObjects = objectListInput.split(",").map(item => item.trim());
     const checklistDiv = document.getElementById("checklist");
     const listItems = checklistDiv.querySelectorAll("li");
-    let resultText = "";
     let processedObjects = [];
 
     originalObjects.forEach((objectName, index) => {
@@ -36,11 +35,8 @@ function processChecklist() {
             const checkbox = listItem.querySelector("input[type='checkbox']");
             if (checkbox.id === objectName) {
                 found = true;
-                const comma = (index < originalObjects.length - 1) ? "," : ""; // Add comma if not the last item
                 if (checkbox.checked) {
-                    processedObjects.push(`/*
-${objectName}${comma}
-*/`);
+                    processedObjects.push(`/*\n${objectName}\n*/`);
                 } else {
                     processedObjects.push(objectName);
                 }
@@ -52,7 +48,19 @@ ${objectName}${comma}
         }
     });
 
-    resultText = processedObjects.join(", ");
+    // Join with commas, handling commented-out items correctly
+    let resultText = "";
+    for (let i = 0; i < processedObjects.length; i++) {
+        resultText += processedObjects[i];
+        if (i < processedObjects.length - 1) {
+            let nextItem = processedObjects[i+1];
+            if (!nextItem.startsWith("/*")) { // Only add comma if the next item is NOT commented out
+                resultText += ", ";
+            } else if (nextItem.startsWith("/*") && !processedObjects[i].startsWith("/*")) {
+                resultText += ", ";
+            }
+        }
+    }
     document.getElementById("result").textContent = resultText;
 }
 
