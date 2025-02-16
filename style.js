@@ -2,10 +2,9 @@ const cost1 = ["Rattfratz", "Icognito", "Waumpel", "Eneco", "Schluppuck", "Burmi
 // "Raupi", "Zubat", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
 
 
-const cost2 = ["Taubsi", "Habitak", "Pummeluff", "Porenta", "Rettan", "Sandan", "Voltoball", "Myrapla", "Bluzuk", "Enton", "Krabby", "Ditto", "Natu", "Schneckmag", "Felino", "Tannza"
-  , "Fiffyen", "Zigzachs", "Knilz", "Kecleon", "Volbeat", "Gehweiher", "Formeo", "Plusle", "Minun", "Mobai", "Pandir", "Illumise", "Liebiskus"
-  , "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Dusselgurr", "Irrbis", "Dedenne", "Rocara", "Fynx", "Scoppel", "Mangunior", "Mabula", "AloRattfratz"
-  , "Raffel", "Sensect", "AloSandan", "GalPonita", "GalPorenta", "GalFlunschliko", "Ferkuli" ];
+const cost2 = ["Taubsi", "Habitak", "Porenta", "Sandan", "Bluzuk", "Krabby", "Natu", "Felino", "Knilz", "Kecleon", "Volbeat", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Rocara", "Scoppel", "Mabula", "Raffel", "AloSandan", "GalPorenta", "GalFlunschliko"];
+/* "Pummeluff", "Rettan", "Voltoball", "Myrapla", "Enton", "Ditto", "Schneckmag", "Tannza", "Fiffyen", "Zigzachs", "Gehweiher", "Mobai", "Liebiskus", "Dusselgurr", "Irrbis", "Dedenne", "Fynx", "Mangunior", "AloRattfratz", "Sensect", "GalPonita", "Ferkuli" */ 
+
 const cost3 = ["Bisasam", "Schiggy", "Glumanda", "Kleinstein", "Amonitas", "Schlurp", "Chaneira", "Kabuto", "Tangela", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Digda", "Quapsel", "Abra", "Machollo", "Tentacha",  "Ponita", "Flegmon", "Magnetilo", "Sleima", "Nebulak", "Traumato", "Tragosso", "Smogon", "Rihorn", "Goldini", "Endivie", "Feurigel", "Karnimani", "Togepi", "Lampi", "Yanma", "Mogelbaum", "Remoraid", "Corasonn", "Pichu", "Pii", "Voltilamm", "Griffel", "Traunfugil", "Snubbull", "Baldorfish", "Phanpy", "Kussilla"
   , "Geckarbor", "Flemmli", "Hydropi", "Loturzel", "Zwirrlicht", "Samurzel", "Seemops", "Quiekel", "Botogel", "Schwalbini", "Wingull", "Flurmel", "Makuhita", "Azurill", "Nasgnet", "Zobiris", "Stollunior", "Frizelbliz", "Kanivanha", "Wailmer", "Camaub", "Spoink", "Tuska", "Wablu", "Schmerbe", "Krebscorps", "Puppance", "Liliep", "Anorith", "Shuppet", "Isso", "Schneppke", "Perlu"
   , "Chelast", "Panflam", "Plinfa", "Flunkifer", "Haspiror", "Pachirisu", "Shnebedeck", "Staralili", "Trasla", "Sheinux", "Knospi", "Koknodon", "Schilterus", "Tropius", "Bamelin", "Schalellos", "Driftlon", "Charmian", "Klingplim", "Skunkapuh", "Bronzel", "Pantimimi", "Hippopotas", "Pionskora", "Glibunkel", "Mantirps"
