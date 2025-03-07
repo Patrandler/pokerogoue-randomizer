@@ -204,7 +204,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 15.02.2024, zuletzt hinzugefügt: Regigigas";
+  document.getElementById("version").textContent = "Version vom 07.03.2024, zuletzt hinzugefügt: Regidrago, Kapu-Fala";
 }
 
 version();
