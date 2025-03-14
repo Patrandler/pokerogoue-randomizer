@@ -1,5 +1,5 @@
-const cost1 = ["Rattfratz", "Icognito", "Eneco", "Schluppuck", "Burmi"];
-// "Raupi", "Waumpel", "Kikugi", "Zubat", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
+const cost1 = ["Rattfratz", "Icognito", "Schluppuck", "Burmi"];
+// "Raupi", "Waumpel", "Kikugi", "Zubat", "Eneco", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
 
 
 const cost2 = ["Taubsi", "Habitak", "Porenta", "Bluzuk", "Krabby", "Natu", "Knilz", "Kecleon", "Volbeat", "Formeo", "Plusle", "Minun", "Pandir", "Illumise", "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Rocara", "Scoppel", "Mabula", "AloSandan", "GalPorenta", "GalFlunschliko"];
