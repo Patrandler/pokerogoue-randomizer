@@ -107,10 +107,12 @@ function myFunction() {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
-    }  else if (firstPick === 32) {
-      const chosenItem = pickItem(cost9);
-      document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
-      pointCounter += 9;
+    }  
+    //workaround changed 9 cost because that list is empty now
+    else if (firstPick === 32) {
+      //const chosenItem = pickItem(cost9);
+      //document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
+      pointCounter += 0;
 
 
     } else if(firstPick === 33 && gotBonus===false) {
