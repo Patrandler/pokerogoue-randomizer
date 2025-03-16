@@ -77,9 +77,9 @@ function myFunction() {
       document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
       pointCounter += 2;
     } else if (firstPick >= 12 && firstPick <= 17) {
-      const chosenItem = pickItem(cost1);
-      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";
-      pointCounter += 1;
+      /*const chosenItem = pickItem(cost1);
+      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";*/
+      pointCounter += 0;
     }
     else if (firstPick >= 18 && firstPick <= 23) {
       const chosenItem = pickItem(cost4);
@@ -128,7 +128,7 @@ function myFunction() {
 
     }}
 
-  document.getElementById("ersatz").textContent += pickItem(cost1) + " (1 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
+  document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 
 }
 
