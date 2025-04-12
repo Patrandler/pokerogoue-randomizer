@@ -25,8 +25,8 @@ const cost5 = ["Aerodactyl", "Elektek", "Kicklee", "Magmar", "Lapras", "Skarabor
 /*"Pescragon", "Mew", "Kangama", "Sichlor", "Tauros", "Relaxo", "Rotom", "Fermicula", "Shardrago", "Kommandutan", "Mimigma", "Leycrodon", "Gierspenst", "PalTauros", "Heerashai" */ 
 const cost6 = ["Lavados", "Arktos", "Entei", "Suicune", "Raikou", "Registeel", "Regirock", "Regice", "Cresselia", "Shaymin", "Heatran", "Selfe", "Tobutz", "Vesprit", "Terrakium", "Kobalium", "Meloetta", "Viridium", "Genesect", "Keldeo", "Volcanion", "Voltriant", "Kapu-Toro", "Anego", "Kaguron", "Muramura", "Kapu-Riki", "Kapu-Fala", "Schlingking", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Benesaru", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Eisenkrieger", "Donnersichel", "Flatterhaar", "Wutpilz", "Eisenhals", "Eisenhaupt", "Eisenbündel", "Eisendorn", "Eisenblatt", "Galar-Arktos", "Sandfell", "Zeraora", "Infamomo"]
 /* "Regidrago", "Darkrai", "Furienblitz",*/
-const cost7 = ["Jirachi", "Diancie", "Deoxys", "Manaphy", "Latias", "Regigigas", "Victini", "Demeteros", "Hoopa", "Magearna", "Katagami", "Venicro", "Marshadow", "Schabelle", "Cupidos", "Phantoross", "Ursaluna", "Ogerpon", "Kopplosio", "Yuyu"]
-const cost8 = ["Ho-Oh", "Dialga", "Kyurem", "Zekrom", "Yveltal", "Necrozma", "Coronospa", "Zamazenta"]
+const cost7 = ["Jirachi", "Diancie", "Deoxys", "Manaphy", "Latias", "Regigigas", "Victini", "Demeteros", "Hoopa", "Magearna", "Katagami", "Venicro", "Marshadow", "Schabelle", "Cupidos", "Phantoross", "Windewoge", "Ursaluna", "Ogerpon", "Kopplosio", "Yuyu"]
+const cost8 = ["Ho-Oh", "Dialga", "Kyurem", "Zekrom", "Yveltal", "Necrozma", "Coronospa", "Zamazenta", "Terapagos"]
 /* "Mewto", "Palkia", "Zygarde",*/
 const cost9 = ["Groudon", "Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
@@ -207,7 +207,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 07.03.2024, zuletzt hinzugefügt: 9-Kosten removed";
+  document.getElementById("version").textContent = "Version vom 12.04.2024, zuletzt hinzugefügt: Windewoge, Terapagos";
 }
 
 version();
