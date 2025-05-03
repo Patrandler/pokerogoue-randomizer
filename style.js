@@ -127,14 +127,14 @@ function myFunction() {
 
     }}
 
-  document.getElementById("ersatz").textContent += "Ersatz 2-er Kosten: " + pickItem(cost2) + pickItem(cost2) + /n + "Ersatz 3-er Kosten: " + pickItem(cost3) + pickItem(cost3) + pickItem(cost3);
+  document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte)";
 
 }
 
 function myFunction2() {
   pointCounter = 0;
   document.getElementById("pokemon2").textContent = "Dein Team ist:";
-  /*document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";*/
+  document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
 
     let firstPick = randomizer(23);
