@@ -127,7 +127,7 @@ function myFunction() {
 
     }}
 
-  document.getElementById("ersatz").textContent += "Ersatz 2-er Kosten: " + pickItem(cost2) + pickItem(cost2) + "Ersatz 3-er Kosten: " + pickItem(cost3) + pickItem(cost3) + pickItem(cost3);
+  document.getElementById("ersatz").textContent += "Ersatz 2-er Kosten: " + pickItem(cost2) + pickItem(cost2) + /n + "Ersatz 3-er Kosten: " + pickItem(cost3) + pickItem(cost3) + pickItem(cost3);
 
 }
 
