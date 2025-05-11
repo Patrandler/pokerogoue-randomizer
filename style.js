@@ -207,7 +207,7 @@ function myFunction2() {
 }
 
 function version () {
-  document.getElementById("version").textContent = "Version vom 02.05.2024, zuletzt hinzugefügt: Keilflamme";
+  document.getElementById("version").textContent = "Version vom 11.05.2024, zuletzt hinzugefügt: Cosmog, Brüllschweif, Dinglu";
 }
 
 version();
