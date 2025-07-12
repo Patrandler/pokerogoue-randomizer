@@ -52,19 +52,7 @@ function myFunction() {
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
 
-    let firstPick = randomizer(33);
-    /*do {
-      firstPick = randomizer(8);
-      // Check for overflow with all possibilities (assuming pointCounter starts at 0)
-    } while ( (firstPick === 1 && pointCounter + 3 > 10) ||
-      (firstPick === 2 && pointCounter + 2 > 10) ||
-      (firstPick === 3 && pointCounter + 3 > 10) ||
-      (firstPick === 4 && pointCounter + 4 > 10) ||
-      (firstPick === 5 && pointCounter + 5 > 10) ||
-      (firstPick === 6 && pointCounter + 6 > 10) ||
-      (firstPick === 7 && pointCounter + 8 > 10)
-      // ... add checks for all other options (4, 5, 6, 7)
-      );*/
+    let firstPick = randomizer(33); // max value adjusted to account for all options up to 33
 
     if (firstPick >= 0 && firstPick <= 5) {
       pointCounter += 3;
@@ -79,56 +67,47 @@ function myFunction() {
       /*const chosenItem = pickItem(cost1);
       document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";*/
       pointCounter += 0;
-    }
-    else if (firstPick >= 18 && firstPick <= 23) {
+    } else if (firstPick >= 18 && firstPick <= 23) {
       const chosenItem = pickItem(cost4);
       document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
       pointCounter += 4;
-    }
-
-    else if (firstPick >= 24 && firstPick <= 28) {
+    } else if (firstPick >= 24 && firstPick <= 28) {
       const chosenItem = pickItem(cost5);
       document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
       pointCounter += 5;
-    }
-
-    else if (firstPick === 29) {
+    } else if (firstPick === 29) {
       const chosenItem = pickItem(cost6);
       document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
       pointCounter += 6;
-    }
-    else if (firstPick === 30) {
+    } else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
       document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
       pointCounter += 8;
-    }
-
-    else if (firstPick === 31) {
+    } else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
-    }  
+    }
     //workaround changed 9 cost because that list is empty now
     else if (firstPick === 32) {
       //const chosenItem = pickItem(cost9);
       //document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
       pointCounter += 0;
+    }
+    // The previous bonus condition (firstPick === 33 && gotBonus===false) is removed from the loop.
+    // The bonus will be applied unconditionally after the loop or in a dedicated section.
+  }
 
-
-    } else if(firstPick === 33 && gotBonus===false) {
-      const chosenItem = pickItem(pokemonTypes);
-      const pokeGen = (Math.floor(Math.random() * 9)+1);
-      const pokeGen2 = (Math.floor(Math.random() * 9)+1);
-      if (pokeGen !== pokeGen2) {
-        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
-        gotBonus = true;
-      }
-      pointCounter+=0;
-
-    }}
+  // Bonus-Teil wird IMMER hier ausgeführt, nachdem die Schleife beendet ist oder die Punkte erreicht wurden
+  const chosenItem = pickItem(pokemonTypes);
+  const pokeGen = (Math.floor(Math.random() * 9) + 1);
+  const pokeGen2 = (Math.floor(Math.random() * 9) + 1);
+  if (pokeGen !== pokeGen2) {
+    document.getElementById("bonus").textContent += "Bonus (optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
+    // gotBonus = true; // No longer needed as it's always executed
+  }
 
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
-
 }
 
 function myFunction2() {
