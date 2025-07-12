@@ -117,7 +117,7 @@ const chosenItem = pickItem(pokemonTypes);
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
 }
   
-}
+
 
 function myFunction2() {
   pointCounter = 0;
