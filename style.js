@@ -69,21 +69,7 @@ function myFunction() {
     if (firstPick >= 0 && firstPick <= 5) {
       pointCounter += 3;
       const chosenItem = pickItem(cost3);
-      document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) "
-};
-    else if(gotBonus===false) {
-      const chosenItem = pickItem(pokemonTypes);
-      const pokeGen = (Math.floor(Math.random() * 9)+1);
-      const pokeGen2 = (Math.floor(Math.random() * 9)+1);
-      const pokeGen3 = (Math.floor(Math.random() * 9)+1);
-      if (pokeGen !== pokeGen2) {
-        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (muss jeweils ein aus Generation " + pokeGen + " und " + pokeGen2 + " und" + pokeGen3 + " sein.";
-        gotBonus = true;
-      }
-      pointCounter+=0;
-    }
-
-  
+      document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
 
     } else if (firstPick >= 6 && firstPick <= 11) {
       const chosenItem = pickItem(cost2);
@@ -129,7 +115,17 @@ function myFunction() {
       pointCounter += 0;
 
 
-    }
+    } else if(firstPick === 33 && gotBonus===false) {
+      const chosenItem = pickItem(pokemonTypes);
+      const pokeGen = (Math.floor(Math.random() * 9)+1);
+      const pokeGen2 = (Math.floor(Math.random() * 9)+1);
+      if (pokeGen !== pokeGen2) {
+        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
+        gotBonus = true;
+      }
+      pointCounter+=0;
+
+    }}
 
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
 
