@@ -115,12 +115,13 @@ function myFunction() {
       pointCounter += 0;
 
 
-    } else if(firstPick === 33 && gotBonus===false) {
+    } else if(gotBonus===false) {
       const chosenItem = pickItem(pokemonTypes);
       const pokeGen = (Math.floor(Math.random() * 9)+1);
       const pokeGen2 = (Math.floor(Math.random() * 9)+1);
+      const pokeGen3 = (Math.floor(Math.random() * 9)+1);
       if (pokeGen !== pokeGen2) {
-        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
+        document.getElementById("bonus").textContent += "Bonus(optional): Ein " + chosenItem + " Pokemon deiner Wahl (muss jeweils ein aus Generation " + pokeGen + " und " + pokeGen2 + " und" + pokeGen3 + " sein.";
         gotBonus = true;
       }
       pointCounter+=0;
