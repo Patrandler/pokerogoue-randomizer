@@ -97,17 +97,25 @@ function myFunction() {
     // The previous bonus condition (firstPick === 33 && gotBonus===false) is removed from the loop.
     // The bonus will be applied unconditionally after the loop or in a dedicated section.
   }
+const chosenItem = pickItem(pokemonTypes);
 
-  // Bonus-Teil wird IMMER hier ausgeführt, nachdem die Schleife beendet ist oder die Punkte erreicht wurden
-  const chosenItem = pickItem(pokemonTypes);
-  const pokeGen = (Math.floor(Math.random() * 9) + 1);
-  const pokeGen2 = (Math.floor(Math.random() * 9) + 1);
-  if (pokeGen !== pokeGen2) {
-    document.getElementById("bonus").textContent += "Bonus (optional): Ein " + chosenItem + " Pokemon deiner Wahl (wenn möglich aus Generation " + pokeGen + " oder " + pokeGen2 + " sonst beliebig), muss mit einem Pokemon aus der Liste ausgetauscht werden, das die selben Kosten hat.";
-    // gotBonus = true; // No longer needed as it's always executed
+  let selectedGens = [];
+  while (selectedGens.length < 3) {
+    let newGen = (Math.floor(Math.random() * 9) + 1);
+    if (!selectedGens.includes(newGen)) {
+      selectedGens.push(newGen);
+    }
   }
 
+  const pokeGen1 = selectedGens[0];
+  const pokeGen2 = selectedGens[1];
+  const pokeGen3 = selectedGens[2];
+
+  document.getElementById("bonus").textContent += "Mono-Challenge: jeweils ein" + chosenItem + " Pokemon aus Generation " + pokeGen1 + ", " + pokeGen2 + " und " + pokeGen3 + ". ";
+
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
+}
+  
 }
 
 function myFunction2() {
