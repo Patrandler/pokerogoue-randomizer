@@ -111,7 +111,8 @@ const chosenItem = pickItem(pokemonTypes);
   const pokeGen2 = selectedGens[1];
   const pokeGen3 = selectedGens[2];
 
-  document.getElementById("bonus").textContent += "Mono-Challenge: jeweils ein" + chosenItem + " Pokemon aus Generation " + pokeGen1 + ", " + pokeGen2 + " und " + pokeGen3 + ". ";
+  document.getElementById("bonus").textContent += "Mono-Challenge: jeweils ein " + chosenItem + " Pokemon aus Generation " + pokeGen1 + ", " + pokeGen2 + " und " + pokeGen3 + ". ";
+
 
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
 }
