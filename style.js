@@ -2,7 +2,7 @@ const cost1 = ["Rattfratz", "Icognito", "Schluppuck"];
 // "Raupi", "Waumpel", "Kikugi", "Zubat", "Eneco", "Burmi", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
 
 
-const cost2 = ["Porenta", "Krabby", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Nagelotz", "Plaudagei", "Venuflibis", "Maracamba", "Scoppel", "Mabula", "AloSandan", "GalPorenta"];
+const cost2 = [/* "Nagelotz", "Maracamba", "Mabula", "AloSandan" */ "Porenta", "Krabby", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Plaudagei", "Venuflibis", "Scoppel", "GalPorenta"];
 /* "Pummeluff", "Taubsi", "Bluzuk", "Rettan", " "Formeo", Habitak", "Minun", "Kecleon", "Voltoball", "Knilz", "Myrapla", "Sandan", "Enton", "Natu", "Ditto", "Pandir", "Felino", "Schneckmag", "Tannza", "Fiffyen", "Zigzachs", "Illumise", "Gehweiher", "Mobai", "Liebiskus", "Dusselgurr", "GalFlunschliko", "Irrbis", "Dedenne", "Rocara","Fynx", "Mangunior", "AloRattfratz", "Sensect", "GalPonita", "Raffel", "Ferkuli" */ 
 
 const cost3 = [/* "Bisasam", "Schiggy", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Abra", "Machollo", "Ponita", "Flegmon", "Magnetilo", "Nebulak", "Tragosso", "Smogon", "Rihorn", "Goldini", "Feurigel", "Yanma", "Mogelbaum", "Pichu", "Voltilamm", "Griffel", "Traunfugil", "Kussilla" */ "Glumanda", "Kleinstein", "Amonitas", "Schlurp", "Chaneira", "Kabuto", "Tangela", "Digda", "Quapsel", "Tentacha", "Sleima", "Traumato", "Endivie", "Karnimani", "Togepi", "Lampi", "Remoraid", "Corasonn", "Pii", "Snubbull", "Baldorfish", "Phanpy",
