@@ -42,9 +42,8 @@ function myFunction() {
   pointCounter = 0;
   gotBonus = false;
   
-  // Hier erstellen wir zwei leere Arrays, um die gezogenen Originalnamen zu speichern
   let hauptTeam = [];
-  let ersatzTeam = []; // Wird weiter unten gefüllt, falls die Punkte > 10 sind
+  let ersatzTeam = []; 
 
   document.getElementById("bonus").textContent = "";
   document.getElementById("pokemon").textContent = "Dein Team ist:";
@@ -52,104 +51,134 @@ function myFunction() {
   
   while (pointCounter < 10) {
 
-    let firstPick = randomizer(33); // max value adjusted to account for all options up to 33
+    let firstPick = randomizer(33); 
 
     if (firstPick >= 0 && firstPick <= 5) {
       pointCounter += 3;
       const chosenItem = pickItem(cost3);
       document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
 
     } else if (firstPick >= 6 && firstPick <= 11) {
       const chosenItem = pickItem(cost2);
       document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
       pointCounter += 2;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick >= 12 && firstPick <= 17) {
-      /*const chosenItem = pickItem(cost1);
-      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";*/
       pointCounter += 0;
     } else if (firstPick >= 18 && firstPick <= 23) {
       const chosenItem = pickItem(cost4);
       document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
       pointCounter += 4;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick >= 24 && firstPick <= 28) {
       const chosenItem = pickItem(cost5);
       document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
       pointCounter += 5;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick === 29) {
       const chosenItem = pickItem(cost6);
       document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
       pointCounter += 6;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
       document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
       pointCounter += 8;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
+      hauptTeam.push(chosenItem); 
       
     } else if (firstPick === 32) {
-      //const chosenItem = pickItem(cost9);
-      //document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
       pointCounter += 0;
     }
   }
 
-  // --- BEISPIEL FÜR DAS ERSATZTEAM (Ergänze hier deine echte Logik, falls Punkte > 10) ---
+  // --- HIER DEINE LOGIK FÜR DAS ERSATZTEAM ANBINDEN ---
   if (pointCounter > 10) {
-    // Hier simuliere ich, dass Ersatz-Pokémon gezogen werden. Ersetze das mit deinem Code!
     let einErsatz = pickItem(cost2); 
     ersatzTeam.push(einErsatz);
     document.getElementById("ersatz").textContent += einErsatz + " ";
   }
 
-
-  // ==========================================
-  // AB HIER STARTET DER NEUE LISTEN-CHECK
-  // ==========================================
+  // ===================================================
+  // AB HIER STARTET DER KORREKTE CHECK (STRIKTE SEREBII-REIHENFOLGE)
+  // ===================================================
   
-  // Die offizielle Set-Liste für den schnellen Abgleich (wichtig: Kleinbuchstaben)
-  const megaNamenSet = new Set([
-      "raichu", "pixi", "sarzenia", "starmie", "dragoran", "meganie", "impergator", 
-      "panzaeron", "palimpalim", "absol", "staraptor", "knakrack", "lucario", 
-      "frosdedje", "heatran", "darkrai", "flambirex", "stalobor", "cerapendra", 
-      "irokex", "zapplarang", "skelabra", "golgantes", "brigaron", "fennexis", 
-      "quajutsu", "pyroleo", "floette", "psiaugon", "malamar", "thanathora", 
-      "tandrak", "resladero", "zygarde", "krabbox", "tectass", "sen-long", 
-      "magearna", "zeraora", "legios", "scovillain", "luxtra", "aggrostella", 
-      "glimmora", "nigiragi", "espinodon"
+  const megaBasisNamenSet = new Set([
+      "pichu", 
+      "pikachu" // 1. Mega Raichu X & Y
+      "piepi", 
+      "Pii" // 2. Mega Clefable
+      "knofensa",     // 3. Mega Victreebel
+      "sterndu",      // 4. Mega Starmie
+      "dratini",      // 5. Mega Dragonite
+      "endivie",      // 6. Mega Meganium
+      "karnimani",    // 7. Mega Feraligatr
+      "panzaeron",    // 8. Mega Skarmory
+      "palimpalim",
+      "Klingplim", // 9. Mega Chimecho
+      "absol",        // 10. Mega Absol Z
+      "staralili",    // 11. Mega Staraptor
+      "kaumalat",     // 12. Mega Garchomp Z
+      "riolu",        // 13. Mega Lucario Z
+      "schneppke",    // 14. Mega Froslass
+      "heatran",      // 15. Mega Heatran
+      "darkrai",      // 16. Mega Darkrai
+      "floink",       // 17. Mega Emboar
+      "rotomurf",     // 18. Mega Excadrill
+      "toxiped",      // 19. Mega Scolipede
+      "zurrokex",     // 20. Mega Scrafty
+      "zapplardin",   // 21. Mega Eelektross
+      "lichtel",      // 22. Mega Chandelure
+      "golbit",       // 23. Mega Golurk
+      "igamaro",      // 24. Mega Chesnaught
+      "fynx",         // 25. Mega Delphox
+      "froxy",        // 26. Mega Greninja
+      "leufeo",       // 27. Mega Pyroar
+      "flabébé",      // 28. Mega Floette
+      "flabebe",      // 28b. Ausweichschreibweise ohne Akzent
+      "psiau",        // 29. Mega Meowstic
+      "iscalar",      // 30. Mega Malamar
+      "bithora",      // 31. Mega Barbaracle
+      "algitt",       // 32. Mega Dragalge
+      "resladero",    // 33. Mega Hawlucha
+      "zygarde",      // 34. Mega Zygarde
+      "krabbox",      // 35. Mega Crabominable
+      "reißlaus",     // 36. Mega Golisopod
+      "sen-long",     // 37. Mega Drampa
+      "magearna",     // 38. Mega Magearna (beide Farbformen)
+      "zeraora",      // 39. Mega Zeraora
+      "legios",       // 40. Mega Falinks
+      "chilingel",    // 41. Mega Scovillain
+      "lumispross",   // 42. Mega Glimmora
+      "nigiragi",     // 43. Mega Tatsugiri (alle Formen)
+      "frospino"      // 44. Mega Baxcalibur
   ]);
 
   // 1. Check für das Hauptteam
   const hauptTeamTreffer = hauptTeam.some(pokemon => 
-      megaNamenSet.has(pokemon.trim().toLowerCase())
+      megaBasisNamenSet.has(pokemon.trim().toLowerCase())
   );
   if (hauptTeamTreffer) {
       console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Hauptteam)");
-      // Optional: Du kannst die Nachricht auch auf der Webseite einblenden, z.B.:
-      // document.getElementById("pokemon").textContent += " -> [Enthält neues Mega!]";
   }
 
-  // 2. Check für das Ersatzteam (nur wenn überhaupt Pokémon drin sind)
+  // 2. Check für das Ersatzteam
   if (ersatzTeam.length > 0) {
       const ersatzTeamTreffer = ersatzTeam.some(pokemon => 
-          megaNamenSet.has(pokemon.trim().toLowerCase())
+          megaBasisNamenSet.has(pokemon.trim().toLowerCase())
       );
       if (ersatzTeamTreffer) {
           console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Ersatzpokemon)");
-          // Optional: document.getElementById("ersatz").textContent += " -> [Enthält neues Mega!]";
       }
   }
 }
