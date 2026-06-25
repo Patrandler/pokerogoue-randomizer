@@ -39,58 +39,98 @@ function pickItem(list) {
 }
 
 function myFunction() {
-  pointCounter = 0;
-  gotBonus = false;
+  let pointCounter = 0;
+  let gotBonus = false;
+  
+  let hauptTeam = [];
+  let ersatzTeam = []; 
+
   document.getElementById("bonus").textContent = "";
   document.getElementById("pokemon").textContent = "Dein Team ist:";
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
+  
   while (pointCounter < 10) {
-
-    let firstPick = randomizer(33); // max value adjusted to account for all options up to 33
+    let firstPick = randomizer(33); 
 
     if (firstPick >= 0 && firstPick <= 5) {
       pointCounter += 3;
       const chosenItem = pickItem(cost3);
       document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
+      hauptTeam.push(chosenItem); 
 
     } else if (firstPick >= 6 && firstPick <= 11) {
       const chosenItem = pickItem(cost2);
       document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
       pointCounter += 2;
+      hauptTeam.push(chosenItem); 
+      
     } else if (firstPick >= 12 && firstPick <= 17) {
-      /*const chosenItem = pickItem(cost1);
-      document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";*/
       pointCounter += 0;
     } else if (firstPick >= 18 && firstPick <= 23) {
       const chosenItem = pickItem(cost4);
       document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
       pointCounter += 4;
+      hauptTeam.push(chosenItem); 
+      
     } else if (firstPick >= 24 && firstPick <= 28) {
       const chosenItem = pickItem(cost5);
       document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
       pointCounter += 5;
+      hauptTeam.push(chosenItem); 
+      
     } else if (firstPick === 29) {
       const chosenItem = pickItem(cost6);
       document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
       pointCounter += 6;
+      hauptTeam.push(chosenItem); 
+      
     } else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
       document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
       pointCounter += 8;
+      hauptTeam.push(chosenItem); 
+      
     } else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
-    }
-    //workaround changed 9 cost because that list is empty now
-    else if (firstPick === 32) {
-      //const chosenItem = pickItem(cost9);
-      //document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
+      hauptTeam.push(chosenItem); 
+      
+    } else if (firstPick === 32) {
       pointCounter += 0;
     }
-    // The previous bonus condition (firstPick === 33 && gotBonus===false) is removed from the loop.
-    // The bonus will be applied unconditionally after the loop or in a dedicated section.
   }
+
+  if (pointCounter > 10) {
+    let einErsatz = pickItem(cost2); 
+    ersatzTeam.push(einErsatz);
+    document.getElementById("ersatz").textContent += einErsatz + " ";
+  }
+
+  // Das Set ist hier frisch, sauber und fehlerfrei geschrieben
+  const megaBasisNamenSet = new Set([
+      "pichu",
+      "leufeo"
+  ]);
+
+  // 1. Check für das Hauptteam
+  const hauptTeamTreffer = hauptTeam.some(pokemon => 
+      megaBasisNamenSet.has(pokemon.trim().toLowerCase())
+  );
+  if (hauptTeamTreffer) {
+      console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Hauptteam)");
+  }
+
+  // 2. Check für das Ersatzteam
+  if (ersatzTeam.length > 0) {
+      const ersatzTeamTreffer = ersatzTeam.some(pokemon => 
+          megaBasisNamenSet.has(pokemon.trim().toLowerCase())
+      );
+      if (ersatzTeamTreffer) {
+          console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Ersatzpokemon)");
+      }
+  }
+}
 const chosenItem = pickItem(pokemonTypes);
 
   let selectedGens = [];
