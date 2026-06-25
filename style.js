@@ -115,9 +115,9 @@ function myFunction() {
   
   const megaBasisNamenSet = new Set([
       "pichu", 
-      "pikachu" // 1. Mega Raichu X & Y
+      "pikachu", // 1. Mega Raichu X & Y
       "piepi", 
-      "Pii" // 2. Mega Clefable
+      "Pii", // 2. Mega Clefable
       "knofensa",     // 3. Mega Victreebel
       "sterndu",      // 4. Mega Starmie
       "dratini",      // 5. Mega Dragonite
