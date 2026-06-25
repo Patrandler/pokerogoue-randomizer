@@ -2,7 +2,7 @@ const cost1 = ["Rattfratz", "Icognito", "Schluppuck"];
 // "Raupi", "Waumpel", "Kikugi", "Zubat", "Eneco", "Burmi", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
 
 
-const cost2 = [/* "Nagelotz", "Maracamba", "Mabula", "AloSandan" */ "Porenta", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Plaudagei", "Scoppel", "GalPorenta", "Pichu", "Leufeo"];
+const cost2 = [/* "Nagelotz", "Maracamba", "Mabula", "AloSandan" */ "Porenta", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Plaudagei", "Scoppel", "GalPorenta", "Pichu"];
 /* "Pummeluff", "Taubsi", "Bluzuk", "Krabby", "Rettan", "Venuflibis" " "Formeo", Habitak", "Minun", "Kecleon", "Voltoball", "Knilz", "Myrapla", "Sandan", "Enton", "Natu", "Ditto", "Pandir", "Felino", "Schneckmag", "Tannza", "Fiffyen", "Zigzachs", "Illumise", "Gehweiher", "Mobai", "Liebiskus", "Dusselgurr", "GalFlunschliko", "Irrbis", "Dedenne", "Rocara","Fynx", "Mangunior", "AloRattfratz", "Sensect", "GalPonita", "Raffel", "Ferkuli" */ 
 
 const cost3 = [/* "Bisasam", "Schiggy", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Abra", "Machollo", "Ponita", "Flegmon", "Magnetilo", "Nebulak", "Tragosso", "Smogon", "Rihorn", "Goldini", "Feurigel", "Yanma", "Mogelbaum", "Pichu", "Voltilamm", "Griffel", "Traunfugil", "Kussilla" */ "Glumanda", "Kleinstein", "Amonitas", "Schlurp", "Chaneira", "Kabuto", "Tangela", "Digda", "Quapsel", "Tentacha", "Sleima", "Traumato", "Endivie", "Karnimani", "Togepi", "Lampi", "Remoraid", "Corasonn", "Pii", "Snubbull", "Baldorfish", "Phanpy",
@@ -111,17 +111,60 @@ const chosenItem = pickItem(pokemonTypes);
 
   document.getElementById("ersatz").textContent += pickItem(cost2) + " (2 Punkt) " + pickItem(cost2) + " (2 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) " + pickItem(cost3) + " (3 Punkte) ";
   const megaBasisNamenSet = new Set([
-      "Pichu", "Leufeo" // deine Liste
+      "pichu",        // 1. Mega Raichu X & Y
+      "piepi",        // 2. Mega Clefable
+      "knofensa",     // 3. Mega Victreebel
+      "sterndu",      // 4. Mega Starmie
+      "dratini",      // 5. Mega Dragonite
+      "endivie",      // 6. Mega Meganium
+      "karnimani",    // 7. Mega Feraligatr
+      "panzaeron",    // 8. Mega Skarmory
+      "palimpalim",   // 9. Mega Chimecho
+      "absol",        // 10. Mega Absol Z
+      "staralili",    // 11. Mega Staraptor
+      "kaumalat",     // 12. Mega Garchomp Z
+      "riolu",        // 13. Mega Lucario Z
+      "schneppke",    // 14. Mega Froslass
+      "heatran",      // 15. Mega Heatran
+      "darkrai",      // 16. Mega Darkrai
+      "floink",       // 17. Mega Emboar
+      "rotomurf",     // 18. Mega Excadrill
+      "toxiped",      // 19. Mega Scolipede
+      "zurrokex",     // 20. Mega Scrafty
+      "zapplardin",   // 21. Mega Eelektross
+      "lichtel",      // 22. Mega Chandelure
+      "golbit",       // 23. Mega Golurk
+      "igamaro",      // 24. Mega Chesnaught
+      "fynx",         // 25. Mega Delphox
+      "froxy",        // 26. Mega Greninja
+      "leoleo",       // 27. Mega Pyroar
+      "flabébé",      // 28. Mega Floette
+      "flabebe",      // 28b. Ausweichschreibweise ohne Akzent
+      "psiau",        // 29. Mega Meowstic
+      "iscalar",      // 30. Mega Malamar
+      "bithora",      // 31. Mega Barbaracle
+      "algitt",       // 32. Mega Dragalge
+      "resladero",    // 33. Mega Hawlucha
+      "zygarde",      // 34. Mega Zygarde
+      "krabbox",      // 35. Mega Crabominable
+      "reißlaus",     // 36. Mega Golisopod
+      "sen-long",     // 37. Mega Drampa
+      "magearna",     // 38. Mega Magearna (beide Farbformen)
+      "zeraora",      // 39. Mega Zeraora
+      "legios",       // 40. Mega Falinks
+      "chilingel",    // 41. Mega Scovillain
+      "lumispross",   // 42. Mega Glimmora
+      "nigiragi",     // 43. Mega Tatsugiri (alle Formen)
+      "frospino"      // 44. Mega Baxcalibur
   ]);
 
   const hauptText = document.getElementById("pokemon").textContent.split(/\s+/);
   const hauptTeamTreffer = hauptText.some(wort => megaBasisNamenSet.has(wort));
 
+  // Wenn ein Treffer erzielt wurde, wird der Text auf der Seite erweitert
   if (hauptTeamTreffer) {
-      console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei");
-  }
-
-} // <-- Das hier ist die allerletzte Klammer deiner gesamten Funktion!
+      document.getElementById("pokemon").textContent += " -> [Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei]";
+  } // <-- Das hier ist die allerletzte Klammer deiner gesamten Funktion!
 
   
 
