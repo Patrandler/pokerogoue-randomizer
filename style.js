@@ -2,7 +2,7 @@ const cost1 = ["Rattfratz", "Icognito", "Schluppuck"];
 // "Raupi", "Waumpel", "Kikugi", "Zubat", "Eneco", "Burmi", "Hornliu", "Jurob", "Paras", "Wiesor", "Hoothoot", "Ledyba", "Webarak", "Hoppspross", "Farbeagle", "Fluffeluff", "Sonnkern", "Zirpurze", "Purmel", "Finneon", "Kleptifux", "Tarundel"
 
 
-const cost2 = [/* "Nagelotz", "Maracamba", "Mabula", "AloSandan" */ "Porenta", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Plaudagei", "Scoppel", "GalPorenta", "Pichu"];
+const cost2 = [/* "Nagelotz", "Maracamba", "Mabula", "AloSandan" */ "Porenta", "Volbeat", "Plusle", "Wadribie", "Wonneira", "Bidiza", "Plaudagei", "Scoppel", "GalPorenta"];
 /* "Pummeluff", "Taubsi", "Bluzuk", "Krabby", "Rettan", "Venuflibis" " "Formeo", Habitak", "Minun", "Kecleon", "Voltoball", "Knilz", "Myrapla", "Sandan", "Enton", "Natu", "Ditto", "Pandir", "Felino", "Schneckmag", "Tannza", "Fiffyen", "Zigzachs", "Illumise", "Gehweiher", "Mobai", "Liebiskus", "Dusselgurr", "GalFlunschliko", "Irrbis", "Dedenne", "Rocara","Fynx", "Mangunior", "AloRattfratz", "Sensect", "GalPonita", "Raffel", "Ferkuli" */ 
 
 const cost3 = [/* "Bisasam", "Schiggy", "Knofensa", "Nidoran W", "Nidoran M", "Vulpix", "Abra", "Machollo", "Ponita", "Flegmon", "Magnetilo", "Nebulak", "Tragosso", "Smogon", "Rihorn", "Goldini", "Feurigel", "Yanma", "Mogelbaum", "Pichu", "Voltilamm", "Griffel", "Traunfugil", "Kussilla" */ "Glumanda", "Kleinstein", "Amonitas", "Schlurp", "Chaneira", "Kabuto", "Tangela", "Digda", "Quapsel", "Tentacha", "Sleima", "Traumato", "Endivie", "Karnimani", "Togepi", "Lampi", "Remoraid", "Corasonn", "Pii", "Snubbull", "Baldorfish", "Phanpy",
@@ -41,15 +41,9 @@ function pickItem(list) {
 function myFunction() {
   pointCounter = 0;
   gotBonus = false;
-  
-  // Hier erstellen wir zwei leere Arrays, um die gezogenen Originalnamen zu speichern
-  let hauptTeam = [];
-  let ersatzTeam = []; // Wird weiter unten gefüllt, falls die Punkte > 10 sind
-
   document.getElementById("bonus").textContent = "";
   document.getElementById("pokemon").textContent = "Dein Team ist:";
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
-  
   while (pointCounter < 10) {
 
     let firstPick = randomizer(33); // max value adjusted to account for all options up to 33
@@ -58,14 +52,11 @@ function myFunction() {
       pointCounter += 3;
       const chosenItem = pickItem(cost3);
       document.getElementById("pokemon").textContent += chosenItem + " (3 Punkte) ";
-      hauptTeam.push(chosenItem); // Name für den Check speichern
 
     } else if (firstPick >= 6 && firstPick <= 11) {
       const chosenItem = pickItem(cost2);
       document.getElementById("pokemon").textContent += chosenItem + " (2 Punkte) ";
       pointCounter += 2;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
     } else if (firstPick >= 12 && firstPick <= 17) {
       /*const chosenItem = pickItem(cost1);
       document.getElementById("pokemon").textContent += chosenItem + " (1 Punkt) ";*/
@@ -74,85 +65,32 @@ function myFunction() {
       const chosenItem = pickItem(cost4);
       document.getElementById("pokemon").textContent += chosenItem + " (4 Punkte) ";
       pointCounter += 4;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
     } else if (firstPick >= 24 && firstPick <= 28) {
       const chosenItem = pickItem(cost5);
       document.getElementById("pokemon").textContent += chosenItem + " (5 Punkte) ";
       pointCounter += 5;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
     } else if (firstPick === 29) {
       const chosenItem = pickItem(cost6);
       document.getElementById("pokemon").textContent += chosenItem + " (6 Punkte) ";
       pointCounter += 6;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
     } else if (firstPick === 30) {
       const chosenItem = pickItem(cost8);
       document.getElementById("pokemon").textContent += chosenItem + " (8 Punkte) ";
       pointCounter += 8;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
     } else if (firstPick === 31) {
       const chosenItem = pickItem(cost7);
       document.getElementById("pokemon").textContent += chosenItem + " (7 Punkte) ";
       pointCounter += 7;
-      hauptTeam.push(chosenItem); // Name für den Check speichern
-      
-    } else if (firstPick === 32) {
+    }
+    //workaround changed 9 cost because that list is empty now
+    else if (firstPick === 32) {
       //const chosenItem = pickItem(cost9);
       //document.getElementById("pokemon").textContent += chosenItem + " (9 Punkte) ";
       pointCounter += 0;
     }
+    // The previous bonus condition (firstPick === 33 && gotBonus===false) is removed from the loop.
+    // The bonus will be applied unconditionally after the loop or in a dedicated section.
   }
-
-  // --- BEISPIEL FÜR DAS ERSATZTEAM (Ergänze hier deine echte Logik, falls Punkte > 10) ---
-  if (pointCounter > 10) {
-    // Hier simuliere ich, dass Ersatz-Pokémon gezogen werden. Ersetze das mit deinem Code!
-    let einErsatz = pickItem(cost2); 
-    ersatzTeam.push(einErsatz);
-    document.getElementById("ersatz").textContent += einErsatz + " ";
-  }
-
-
-  // ==========================================
-  // AB HIER STARTET DER NEUE LISTEN-CHECK
-  // ==========================================
-  
-  // Die offizielle Set-Liste für den schnellen Abgleich (wichtig: Kleinbuchstaben)
-  const megaNamenSet = new Set([
-      "raichu", "pixi", "sarzenia", "starmie", "dragoran", "meganie", "impergator", 
-      "panzaeron", "palimpalim", "absol", "staraptor", "knakrack", "lucario", 
-      "frosdedje", "heatran", "darkrai", "flambirex", "stalobor", "cerapendra", 
-      "irokex", "zapplarang", "skelabra", "golgantes", "brigaron", "fennexis", 
-      "quajutsu", "pyroleo", "floette", "psiaugon", "malamar", "thanathora", 
-      "tandrak", "resladero", "zygarde", "krabbox", "tectass", "sen-long", 
-      "magearna", "zeraora", "legios", "scovillain", "luxtra", "aggrostella", 
-      "glimmora", "nigiragi", "espinodon"
-  ]);
-
-  // 1. Check für das Hauptteam
-  const hauptTeamTreffer = hauptTeam.some(pokemon => 
-      megaNamenSet.has(pokemon.trim().toLowerCase())
-  );
-  if (hauptTeamTreffer) {
-      console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Hauptteam)");
-      // Optional: Du kannst die Nachricht auch auf der Webseite einblenden, z.B.:
-      // document.getElementById("pokemon").textContent += " -> [Enthält neues Mega!]";
-  }
-
-  // 2. Check für das Ersatzteam (nur wenn überhaupt Pokémon drin sind)
-  if (ersatzTeam.length > 0) {
-      const ersatzTeamTreffer = ersatzTeam.some(pokemon => 
-          megaNamenSet.has(pokemon.trim().toLowerCase())
-      );
-      if (ersatzTeamTreffer) {
-          console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Ersatzpokemon)");
-          // Optional: document.getElementById("ersatz").textContent += " -> [Enthält neues Mega!]";
-      }
-  }
-}
 const chosenItem = pickItem(pokemonTypes);
 
   let selectedGens = [];
