@@ -127,6 +127,15 @@ const chosenItem = pickItem(pokemonTypes);
   if (hauptTeamTreffer) {
       document.getElementById("pokemon").textContent += " -> [Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei]";
   }
+
+  // 2. Check für das Ersatzteam
+  const ersatzText = document.getElementById("ersatz").textContent.toLowerCase().split(/\s+/);
+  const ersatzTeamTreffer = ersatzText.some(wort => megaBasisNamenSet.has(wort));
+
+  if (ersatzTeamTreffer) {
+      document.getElementById("ersatz").textContent += " -> [Bei den Ersatz-Pokemon ist eins der neuen Mega Pokemon dabei]";
+  }
+
 }
   
 
