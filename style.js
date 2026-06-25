@@ -38,6 +38,39 @@ function pickItem(list) {
   return list[randomIndex];
 }
 
+const neueMegaPokemon = [
+    "Raichu", "Pixi", "Sarzenia", "Starmie", "Dragoran", "Meganie", "Impergator", 
+    "Panzaeron", "Palimpalim", "Absol", "Staraptor", "Knakrack", "Lucario", 
+    "Frosdedje", "Heatran", "Darkrai", "Flambirex", "Stalobor", "Cerapendra", 
+    "Irokex", "Zapplarang", "Skelabra", "Golgantes", "Brigaron", "Fennexis", 
+    "Quajutsu", "Pyroleo", "Floette", "Psiaugon", "Malamar", "Thanathora", 
+    "Tandrak", "Resladero", "Zygarde", "Krabbox", "Tectass", "Sen-Long", 
+    "Magearna", "Zeraora", "Legios", "Scovillain", "Luxtra", "Aggrostella", 
+    "Glimmora", "Nigiragi", "Espinodon"
+];
+
+// Wir wandeln alle offiziellen Namen in Kleinbuchstaben um und speichern sie in einem Set
+const megaNamenSet = new Set(neueMegaPokemon.map(name => name.toLowerCase()));
+
+// 2. Die Hauptfunktion zum Überprüfen deiner Pokémon-Liste
+function ueberpruefePokemonListe(deineListe) {
+    // some() prüft, ob mindestens ein Element im Set existiert
+    const trefferGefunden = deineListe.some(pokemon => 
+        megaNamenSet.has(pokemon.trim().toLowerCase())
+    );
+
+    if (trefferGefunden) {
+        console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei");
+    } else {
+        console.log("Keines der Pokemon auf der Liste hat eine neue Mega-Entwicklung.");
+    }
+}
+
+// --- BEISPIEL ---
+const testListe = ["Pikachu", "Glurak", "Frosdedje", "Bisasam"];
+ueberpruefePokemonListe(testListe); 
+// Ausgabe: "Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei"
+
 function myFunction() {
   pointCounter = 0;
   gotBonus = false;
