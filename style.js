@@ -164,7 +164,7 @@ const chosenItem = pickItem(pokemonTypes);
   // Wenn ein Treffer erzielt wurde, wird der Text auf der Seite erweitert
   if (hauptTeamTreffer) {
       document.getElementById("pokemon").textContent += " -> [Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei]";
-  } // <-- Das hier ist die allerletzte Klammer deiner gesamten Funktion!
+  }}// <-- Das hier ist die allerletzte Klammer deiner gesamten Funktion!
 
   
 
