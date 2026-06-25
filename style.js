@@ -39,8 +39,6 @@ function pickItem(list) {
 }
 
 function myFunction() {
-  pointCounter = 0;
-  gotBonus = false;
   
   let hauptTeam = [];
   let ersatzTeam = []; 
@@ -50,7 +48,6 @@ function myFunction() {
   document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   
   while (pointCounter < 10) {
-
     let firstPick = randomizer(33); 
 
     if (firstPick >= 0 && firstPick <= 5) {
@@ -102,19 +99,16 @@ function myFunction() {
     }
   }
 
-  // --- HIER DEINE LOGIK FÜR DAS ERSATZTEAM ANBINDEN ---
   if (pointCounter > 10) {
     let einErsatz = pickItem(cost2); 
     ersatzTeam.push(einErsatz);
     document.getElementById("ersatz").textContent += einErsatz + " ";
   }
 
-  // ===================================================
-  // AB HIER STARTET DER KORREKTE CHECK (STRIKTE SEREBII-REIHENFOLGE)
-  // ===================================================
-  
+  // Das Set ist hier frisch, sauber und fehlerfrei geschrieben
   const megaBasisNamenSet = new Set([
-      "pichu", 
+      "pichu",
+      "leufeo"
   ]);
 
   // 1. Check für das Hauptteam
