@@ -97,29 +97,9 @@ function myFunction() {
   document.getElementById("ersatz").textContent += einErsatz + " ";
 
 
-  // ===================================================
-  // NEUER CHECK (Liest den Text direkt von der Webseite)
-  // ===================================================
   
-  const megaBasisNamenSet = new Set([
-      "pichu", "leufeo" // Hier deine restlichen Pokémon-Namen einfügen
-  ]);
-
-  // Holt den Text von der Seite, macht ihn klein und teilt ihn bei jedem Leerzeichen auf
-  const hauptTextSpende = document.getElementById("pokemon").textContent.toLowerCase().split(/\s+/);
-  const ersatzTextSpende = document.getElementById("ersatz").textContent.toLowerCase().split(/\s+/);
-
-  // Prüft, ob eines der Wörter im Set existiert
-  const hauptTeamTreffer = hauptTextSpende.some(wort => megaBasisNamenSet.has(wort));
-  const ersatzTeamTreffer = ersatzTextSpende.some(wort => megaBasisNamenSet.has(wort));
-
-  if (hauptTeamTreffer) {
-      console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Hauptteam)");
   }
-  if (ersatzTeamTreffer) {
-      console.log("Bei diesen Pokemon ist eins der neuen Mega Pokemon dabei (Ersatzpokemon)");
-  }
-}
+
 const chosenItem = pickItem(pokemonTypes);
 
   let selectedGens = [];
