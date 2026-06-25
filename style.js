@@ -115,53 +115,6 @@ function myFunction() {
   
   const megaBasisNamenSet = new Set([
       "pichu", 
-      "pikachu", // 1. Mega Raichu X & Y
-      "piepi", 
-      "Pii", // 2. Mega Clefable
-      "knofensa",     // 3. Mega Victreebel
-      "sterndu",      // 4. Mega Starmie
-      "dratini",      // 5. Mega Dragonite
-      "endivie",      // 6. Mega Meganium
-      "karnimani",    // 7. Mega Feraligatr
-      "panzaeron",    // 8. Mega Skarmory
-      "palimpalim",
-      "Klingplim", // 9. Mega Chimecho
-      "absol",        // 10. Mega Absol Z
-      "staralili",    // 11. Mega Staraptor
-      "kaumalat",     // 12. Mega Garchomp Z
-      "riolu",        // 13. Mega Lucario Z
-      "schneppke",    // 14. Mega Froslass
-      "heatran",      // 15. Mega Heatran
-      "darkrai",      // 16. Mega Darkrai
-      "floink",       // 17. Mega Emboar
-      "rotomurf",     // 18. Mega Excadrill
-      "toxiped",      // 19. Mega Scolipede
-      "zurrokex",     // 20. Mega Scrafty
-      "zapplardin",   // 21. Mega Eelektross
-      "lichtel",      // 22. Mega Chandelure
-      "golbit",       // 23. Mega Golurk
-      "igamaro",      // 24. Mega Chesnaught
-      "fynx",         // 25. Mega Delphox
-      "froxy",        // 26. Mega Greninja
-      "leufeo",       // 27. Mega Pyroar
-      "flabébé",      // 28. Mega Floette
-      "flabebe",      // 28b. Ausweichschreibweise ohne Akzent
-      "psiau",        // 29. Mega Meowstic
-      "iscalar",      // 30. Mega Malamar
-      "bithora",      // 31. Mega Barbaracle
-      "algitt",       // 32. Mega Dragalge
-      "resladero",    // 33. Mega Hawlucha
-      "zygarde",      // 34. Mega Zygarde
-      "krabbox",      // 35. Mega Crabominable
-      "reißlaus",     // 36. Mega Golisopod
-      "sen-long",     // 37. Mega Drampa
-      "magearna",     // 38. Mega Magearna (beide Farbformen)
-      "zeraora",      // 39. Mega Zeraora
-      "legios",       // 40. Mega Falinks
-      "chilingel",    // 41. Mega Scovillain
-      "lumispross",   // 42. Mega Glimmora
-      "nigiragi",     // 43. Mega Tatsugiri (alle Formen)
-      "frospino"      // 44. Mega Baxcalibur
   ]);
 
   // 1. Check für das Hauptteam
