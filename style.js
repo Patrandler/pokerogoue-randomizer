@@ -142,7 +142,7 @@ const chosenItem = pickItem(pokemonTypes);
 
 function myFunction2() {
   pointCounter = 0;
-  document.getElementById("pokemon2").textContent = "Dein Team ist:";
+  document.getElementById("pokemon2").textContent = "Dein Team ist: ";
   document.getElementById("ersatz2").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
   while (pointCounter < 10) {
 
