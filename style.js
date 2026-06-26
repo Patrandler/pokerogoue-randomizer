@@ -42,8 +42,8 @@ function myFunction() {
   pointCounter = 0;
   gotBonus = false;
   document.getElementById("bonus").textContent = "";
-  document.getElementById("pokemon").textContent = "Dein Team ist:";
-  document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen:";
+  document.getElementById("pokemon").textContent = "Dein Team ist: ";
+  document.getElementById("ersatz").textContent = "Wenn mehr als 10 Punkte, kannst du mit diesen Pokemon austauschen: ";
   while (pointCounter < 10) {
 
     let firstPick = randomizer(33); // max value adjusted to account for all options up to 33
