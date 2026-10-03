@@ -19,7 +19,7 @@ const cost5 = [/* "Elektek", "Lapras", "Skaraborn", "Absol", "Sengo", "Karadonis
 const cost6 = [/* "Lavados", "Entei", "Cresselia",  "Selfe", "Meloetta", "Kapu-Toro", "Kaguron", "Muramura", "Schlingking", "Sen-Long", "Benesaru", "Eisenkrieger", "Flatterhaar" */ "Arktos", "Suicune", "Brüllschweif", "Dinglu", "Raikou", "Registeel", "Regirock", "Darkrai", "Heatran", "Regice", "Shaymin", "Tobutz", "Vesprit", "Terrakium", "Kobalium", "Viridium", "Genesect", "Keldeo", "Volcanion", "Voltriant", "Anego", "Kapu-Riki", "Kapu-Fala", "Masskito", "Meltan", "Dakuma", "Zarude", "Polaross", "Chongjian", "Beatori", "GalZapdos", "Kriechflügel", "Eisenfalter", "Eisenhand", "Boninu", "Donnersichel", "Wutpilz", "Eisenhals", "Eisenhaupt", "Eisenbündel", "Eisendorn", "Eisenblatt", "Galar-Arktos", "Sandfell", "Zeraora", "Infamomo"]
 /* "Regidrago",  "Furienblitz",*/
 const cost7 = [/* "Manaphy", "Latias", "Demeteros", "Katagami", "Marshadow" */ "Jirachi", "Diancie", "Cosmog", "Deoxys", "Eisenfels", "Regigigas", "Victini", "Hoopa", "Magearna", "Venicro", "Schabelle", "Cupidos", "Phantoross", "Windewoge", "Keilflamme", "Ursaluna", "Ogerpon", "Kopplosio", "Yuyu"]
-const cost8 = ["Ho-Oh", "Dialga", "Kyurem", "Giratina", "Zygarde", "Yveltal", "Necrozma", "Coronospa", "Zamazenta", "Terapagos", "Miraidon"]
+const cost8 = ["Ho-Oh", "Dialga", "Kyurem", "Giratina", "Zygarde", "Yveltal", "Necrozma", "Coronospa", "Koraidon (9)", "Reshiram", "Zamazenta", "Terapagos", "Miraidon"]
 /* "Mewto", "Palkia", "Zekrom", */
 const cost9 = ["Groudon", "Arceus"]
 const pokemonTypes = ["Normal", "Feuer", "Wasser", "Elektro", "Pflanze", "Flug", "Käfer", "Gift", "Gestein", "Boden", "Kampf", "Eis", "Psycho", "Geist", "Drache", "Unlicht", "Stahl", "Fee"]
